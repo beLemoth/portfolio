@@ -1,0 +1,10 @@
+// CONTACTS section
+section.contacts
+
+    .contacts__map
+    .contacts__info
+        .contacts__title.subtitle
+            | контакты
+            ul.contacts__list
+                each value, item in contacts
+                    li(class="contacts__item contacts__item_"+item)= value

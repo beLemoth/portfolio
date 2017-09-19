@@ -1,1 +1,20 @@
-{}
+{
+  "skills": {
+      "frontend": ["html5","css3","JavaScript & jQuery"],
+      "backend": ["PHP","mySQL","Node.js & npm", "Mongo.db"],
+      "WorkFlow": ["Git","Gulp","Bower"]
+    },
+
+  "navMenu": {
+      "мои работы": "works.html",
+      "блог": "blog.html",
+      "обо мне": "about.html",
+      "авторизация": "auth.html"
+    },
+
+  "socials": {
+    "vk": "https://vk.com/",
+    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/"
+  }
+}
