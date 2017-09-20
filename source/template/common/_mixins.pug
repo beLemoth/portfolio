@@ -11,14 +11,10 @@ mixin header(headerClass,scroll)
             .burger
 
         .header__desc
-            .developer
-                .developer__photo
-                .developer__name Алексей Ильин
-                .developer__description личный вебсайт разработчика
+            +developer
 
         if (scroll)
             .header__scroll-down-arrow
-
 
 //- social icons list
 mixin socials
@@ -28,8 +24,16 @@ mixin socials
                 a(class="socials__link socials__link_" + item href= href target="_blank")
 
 // - navigation menu list
-mixin nav(sectionName)
-    ul(class= sectionName + '-nav')
+mixin nav(sectionName, sectionToPass)
+    ul(class= sectionName + '-nav nav')
         each href, name in navMenu
-            li(class= sectionName + '-nav__item')
-                a(class= sectionName + '-nav__link' href= href)= name
+            if (name!==sectionToPass)
+                li(class= sectionName + '-nav__item nav__item')
+                    a(class= sectionName + '-nav__link nav__link' href= href)= name
+
+mixin developer(section)
+    div(class= (section)?('developer developer-'+section):('developer'))
+        div(class= (section)?('developer__photo developer-'+section+'__photo'):('developer__photo'))
+            img(src=developer.photo alt=developer.name)
+        div(class= (section)?('developer__name developer-'+section+'__name'):('developer__name'))= developer.name
+        div(class= (section)?('developer__description developer-'+section+'__description'):('developer__description'))= developer.description
