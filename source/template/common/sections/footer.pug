@@ -3,14 +3,8 @@ footer.footer
     .footer__block
         p.footer__desc Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
     .footer__block
-        ul.footer-nav
-            each href, name in navMenu
-                li.footer-nav__item
-                    a.footer-nav__link(href= href)= name
-        ul.socials
-            each href, item in socials
-                li.socials__item
-                    a(class="socials__link socials__link_" + item href= href target="_blank")
+        +nav('footer')
+        +socials
     .footer__block
         .testimmonial
             .testimmonial__text
