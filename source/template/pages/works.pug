@@ -1,0 +1,15 @@
+extends ../_template
+
+block variables
+    -
+        var title = 'Мои работы'
+        var description = 'Краткая информация о моих работах'
+
+
+block content
+
+    +header('works',true)
+    include ../common/sections/works
+    include ../common/sections/testimonials
+    include ../common/sections/footer
+    include ../common/sections/menu
