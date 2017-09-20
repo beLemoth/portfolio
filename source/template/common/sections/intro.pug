@@ -1,1 +1,31 @@
-// AUT
+// INTRO section
+
+section.intro
+
+    .auth-button Авторизироваться
+
+    .welcome
+        .welcome__info
+            +developer
+        .welcome__socials
+            +socials
+        .welcome__navigation
+            +nav('welcome','авторизация')
+
+    .login
+        .login__title.subtitle Авторизируйтесь
+        form.login-form
+            input.login-form__name(placeholder='Логин')
+            input.login-form__pass(placeholder='Пароль')
+            input.login-form__is-man(id='is-man__check' name='check' type='checkbox' value='man')
+            label(for='is-man__check') Я человек
+            .not-a-robot
+                p.not-a-robot__title Вы точно не робот?
+                input.not-a-robot__radio(id='not-a-robot_yes' name='robot' type='radio' value='yes')
+                label(for='not-a-robot_yes') Да
+                input.not-a-robot__radio(id='not-a-robot_no' name='robot' type='radio' value='no')
+                label(for='not-a-robot_no') Не уверен
+            .login-form__button.button На главную
+            input.login-form__button.button(type='submit' value='Войти')
+    .intro__footer
+        .copyright=  '&copy '+developer.name+' 2017'
