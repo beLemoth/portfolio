@@ -1,0 +1,24 @@
+// TESTIMONIALS section
+
+section.testimonials
+
+    .testimonials__head
+        h2.testimonials__title.title Что обо мне говорят
+
+    .testimonials-content
+    each item in testimonials
+        .testimonial
+            .testimonial__author-photo
+                img(href= item.authorPhoto alt= item.authorName)
+            .testimonial__text= item.text
+            .testimonial__author-name= item.authorName
+            .testimonial__author-desc= item.authorDesc
+
+    .connection
+        form.connect
+            h2.connect__title.title
+            input.connect__name(placeholder='Имя')
+            input.connect__email(placeholder='Email')
+            textarea.connect__text(placeholder='Ваше сообщение')
+            button.connect__send.button Отправить
+            button.connect__clear.button Очистить
