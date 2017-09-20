@@ -1,4 +1,7 @@
+/* import functions mixins*/
 @import 'common/tools/*.scss';
+
+/* import common folder files */
 @import 'common/*.scss';
 
 .title {
@@ -12,6 +15,5 @@
 }
 
 /* import sections */
-
 @import 'common/sections/*.scss';
 
