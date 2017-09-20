@@ -10,7 +10,7 @@
 
 /* variables */
 
-$rem: 14px;
+$rem: 16px;
 
 $white: #ffffff;
 $light-green: #6c9c5a;
@@ -27,14 +27,36 @@ $medium-text: 'Roboto-Medium', sans-serif;
 
 /* global settings */
 
+html {
+  height: 100%;
+  font-size: $rem;
+}
+
 body {
+  height: 100%;
+  margin: 0;
+  @include font-style($main-text,$light-grey,1rem,1.5,0);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
   margin: 0;
 }
 
-html {
+.wrapper {
   min-height: 100%;
   position: relative;
-  font-size: $rem;
+  overflow: hidden;
 }
 
 .title {
