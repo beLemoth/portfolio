@@ -2,13 +2,28 @@
 @import 'common/mixins/*.scss';
 
 /* local fonts */
-@include font-face('PoiretOneRegular', 'PoiretOneRegular');
+@include font-face('FontAwesome');
+@include font-face('Roboto-Light');
+@include font-face('Roboto-Medium');
+@include font-face('Roboto-Regular');
+@include font-face('Sansus-Webissimo-Regular');
 
 /* variables */
 
-$logo-font: 'PoiretOneRegular', sans-serif;
+$rem: 14px;
 
-$light-text: #43ff1e;
+$white: #ffffff;
+$light-green: #6c9c5a;
+$green: #4e8839;
+$light-grey: #566358;
+$grey: #373e42;
+$red: #e44845;
+$link-color: #6da3bd;
+
+$title-text: 'Sansus-Webissimo-Regular', sans-serif;
+$main-text: 'Roboto-Regular', sans-serif;
+$light-text: 'Roboto-Light', sans-serif;
+$medium-text: 'Roboto-Medium', sans-serif;
 
 /* global settings */
 
@@ -19,10 +34,17 @@ body {
 html {
   min-height: 100%;
   position: relative;
+  font-size: $rem;
 }
 
-.container {
-  width: 1300px; padding: 0 15px; margin: auto;
+.title {
+  @include font-style($title-text,$grey,rem(63px),1.5,0);
+  margin: rem(70px) auto;
+}
+
+.subtitle {
+  @include font-style($title-text,$grey,rem(35px),1.5,0);
+  margin-bottom: rem(40px);
 }
 
 /* import sections */
