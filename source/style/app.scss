@@ -4,14 +4,12 @@
 /* import common folder files */
 @import 'common/*.scss';
 
-.title {
-  @include font-style($title-text,$grey,rem(63px),1.5,0);
-  margin: rem(70px) auto;
-}
+
 
 .subtitle {
   @include font-style($title-text,$grey,rem(35px),1.5,0);
   margin-bottom: rem(40px);
+  text-transform: uppercase;
 }
 
 /* import sections */

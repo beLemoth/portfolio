@@ -1,0 +1,19 @@
+.developer-info {
+  &__photo {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text {
+    p {
+      @include font-style($main-text,$light-grey,rem(16px),1.5,0);
+      margin-bottom: rem(10px);
+    }
+  }
+
+}

@@ -1,0 +1,19 @@
+.skill {
+  position: relative;
+  width: rem(120px);
+  height: rem(120px);
+
+  &__circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &__name {
+    @include font-style($main-text,$green,rem(14px),1.2,0);
+  }
+
+  &__indicator {
+    //transform: rotateY(-90deg);
+  }
+
+}

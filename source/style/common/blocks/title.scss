@@ -1,0 +1,32 @@
+.title-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.title-bg {
+  @include center();
+  height: 100%;
+  width: 100%;
+
+  &_about {
+    fill: rgba($light-green,.1);
+  }
+}
+
+.title {
+  @include font-style($title-text,$grey,rem(63px),rem(100px),0);
+  margin-bottom: rem(70px);
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+
+  &:after {
+    content: '';
+    @include center('x');
+    top: 100%;
+    height: rem(3px);
+    width: rem(90px);
+    background-color: $grey;
+  }
+
+}

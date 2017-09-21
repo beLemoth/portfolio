@@ -1,39 +1,88 @@
 
-//- header section
+- //- header section
 mixin header(headerClass,scroll)
     //HEADER section
     header(class=(headerClass) ? ('header header-' + headerClass) : 'header')
 
         .header__socials
-            +socials
+            +socials('header')
 
         .header__menu
             .burger
+                +icon('hamburger','white')
+
+        - var page = (headerClass=='about')?'portfolio':headerClass
+        svg(class='header__image')
+            use(xlink:href='./assets/img/sprite.svg#' + page + '_header')
 
         .header__desc
             +developer
 
         if (scroll)
             .header__scroll-down-arrow
+                +icon('arrow_down','white')
 
-//- social icons list
-mixin socials
+- //- social icons list
+mixin socials(section)
     ul.socials
         each href, item in socials
             li.socials__item
+                - var color= (section == 'footer')?'grey':'white'
                 a(class="socials__link socials__link_" + item href= href target="_blank")
+                +icon(item,color)
 
-// - navigation menu list
+
+- // - navigation menu list
 mixin nav(sectionName, sectionToPass)
     ul(class= sectionName + '-nav nav')
         each href, name in navMenu
             if (name!==sectionToPass)
                 li(class= sectionName + '-nav__item nav__item')
-                    a(class= sectionName + '-nav__link nav__link' href= href)= name
+                    a(class= sectionName + '-nav__link nav__link' href= href)
 
+- // - developer info block
 mixin developer(section)
-    div(class= (section)?('developer developer-'+section):('developer'))
-        div(class= (section)?('developer__photo developer-'+section+'__photo'):('developer__photo'))
+    div(class= (section)?('developer '+section+'__developer'):('developer'))
+        div(class= (section)?('developer__photo '+section+'__developer-photo'):('developer__photo'))
             img(src=developer.photo alt=developer.name)
-        div(class= (section)?('developer__name developer-'+section+'__name'):('developer__name'))= developer.name
-        div(class= (section)?('developer__description developer-'+section+'__description'):('developer__description'))= developer.description
+        div(class= (section)?('developer__name '+section+'__developer-name'):('developer__name'))= developer.name
+        div(class= (section)?('developer__description '+section+'__developer-description'):('developer__description'))= developer.description
+
+- // - icon svg insert
+mixin icon(name,mod)
+    svg(class="icon icon_" + name + ' icon_' + mod)
+        use(xlink:href="assets/img/sprite.svg#" + name)
+
+- // triangle insert (left||right, size, color)
+mixin triangle(pos,color)
+    -
+        var points= ''
+        if (pos=='left')
+            points= '0 0,900 100,0 100'
+        if (pos=='right')
+            points= '0 100,900 0,900 100'
+    svg(viewbox='0 0 900 100' preserveAspectRatio="none" class="triangle triangle_"+color)
+        polygon(points=points)
+
+- // - title insert
+mixin title(section, title, isMain)
+    .title-wrapper
+        svg(class='title-bg title-bg_'+section)
+            use(xlink:href='./assets/img/sprite.svg#'+section+'_header')
+        if(isMain)
+            h1(class='title '+section+'__title')= title
+        else
+            h2(class='title '+section+'__title')= title
+
+- // - skill circle
+mixin circle(skill,value)
+    div(class="skill skill_" + skill viewbox='0 0 120 120' preserveAspectRatio='none')
+        -
+            var array = 3.14*value
+            var offset = 314-array
+        svg.skill__circle
+            circle(cx='60' cy='60' r='60' fill='#dfdcd5')
+            circle(class='skill__indicator' cx='60' cy='60' r='50' fill='none' stroke='#74a163' stroke-dasharray =array+'' stroke-dashoffset=offset+'' stroke-width="20")
+            circle(cx='60' cy='60' r='40' fill='#ffffff')
+
+        .skill__name= skill

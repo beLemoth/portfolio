@@ -1,1 +1,46 @@
 //HEADER
+
+.header {
+  height: rem(600px);
+  position: relative;
+  background: url('../img/intro-bg.jpg') center top no-repeat;
+  background-size: cover;
+
+  $margin-vert: 20px;
+  $margin-side: 20px;
+
+  &__menu {
+    position: absolute;
+    top: rem($margin-vert);
+    right: rem($margin-side);
+    width: rem($icon-size);
+    height: rem($icon-size);
+  }
+
+  &__socials {
+    position: absolute;
+    top: rem($margin-vert);
+    left: rem($margin-side);
+  }
+
+  &__desc {
+    @include center('y');
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: 50%;
+    @include center('y');
+    fill: rgba($white,.12);
+  }
+
+  &__scroll-down-arrow {
+    @include center('x');
+    bottom: rem($margin-vert);
+    width: rem($icon-size);
+    height: rem($icon-size);
+  }
+
+
+}

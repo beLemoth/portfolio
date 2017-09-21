@@ -1,30 +1,31 @@
 // ABOUT section
 section.about
 
-    .about__left
-        h1.about__title.title
-            | обо мне
+    .about__left.about__side
+        +title('about','обо мне',true)
         .about__description
             .developer-info
                 .developer-info__photo
-                .developer-info__title.subtitle
+                    img(src='./assets/img/developer-about-photo.jpg')
+                .subtitle.developer-info__title Кто я
                 .developer-info__text
                     p Я веб разработчик из Беларусии. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
-    .about__right
+                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        +triangle('left','olive')
+    .about__right.about__side
         .about__utilities
             .utilities
-                .utilities__title.subtitle
-                    | Чем я могу быть вам полезен
+                .subtitle.utilities__title
+                    | Чем я могу быть<br> вам полезен
                 .utilities__description
-                    p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+                    p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
 
                 ul.skill-group-list
                     each skillGroup, item in skills
-                        li.skill-group-list__item= item
+                        li.skill-group-list__item
+                            .skill-group-list__title= item
                             ul.skills-list
                                 each skill in skillGroup
                                     li.skills-list__item
-                                        div(class="skill skills-list__item_"+skill)
-                                            svg.skill__circle
-                                            .skill__name= skill
+                                        +circle(skill,'40')
+        +triangle('right','white')

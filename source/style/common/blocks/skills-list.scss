@@ -1,0 +1,8 @@
+.skills-list {
+  width: 100%;
+  @extend .clearfix;
+  &__item {
+    float: left;
+    width: 25%;
+  }
+}
