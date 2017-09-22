@@ -1,8 +1,18 @@
 .skills-list {
   width: 100%;
   @extend .clearfix;
+  margin-bottom: rem(20px);
   &__item {
     float: left;
-    width: 25%;
+    max-width: 25%;
+    margin: 0 rem(30px);
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

@@ -14,4 +14,24 @@
     @include center();
   }
 
+  &__indicator {
+    &_green {
+      stroke: $light-green;
+    }
+  }
+
+  &__bg {
+    &_grey {
+      fill: $skill-bg;
+    }
+  }
+
+  &__front {
+    &_white {
+      fill: $about-right-bg;
+    }
+  }
+
+
+
 }
