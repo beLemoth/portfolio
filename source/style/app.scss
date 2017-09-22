@@ -12,9 +12,11 @@
   text-transform: uppercase;
 }
 
+/* import blocks */
+@import 'common/blocks/*.scss';
+
 /* import sections */
 @import 'common/sections/*.scss';
 
-/* import blocks */
-@import 'common/blocks/*.scss';
+
 

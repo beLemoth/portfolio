@@ -1,11 +1,12 @@
 .developer-info {
+  width: 50%;
+  float: right;
   &__photo {
     width: 100%;
     overflow: hidden;
 
     img {
-      width: 100%;
-      height: auto;
+
     }
   }
 

@@ -66,7 +66,7 @@ mixin triangle(pos,color)
 
 // - title insert
 mixin title(section, title, isMain)
-    .title-wrapper
+    div(class='title-wrapper '+section+'__title-wrapper')
         svg(class='title-bg title-bg_'+section)
             use(xlink:href='./assets/img/sprite.svg#'+section+'_header')
         if(isMain)
@@ -81,7 +81,7 @@ mixin circle(skill,value)
             var array = 3.14*value
             var offset = 314-array
         svg.skill__circle
-            circle(cx='60' cy='60' r='60' fill='#dfdcd5')
-            circle(class='skill__indicator' cx='60' cy='60' r='50' fill='none' stroke='#74a163' stroke-dasharray =array+' '+offset stroke-width="20" stroke-opacity=value/100)
-            circle(cx='60' cy='60' r='40' fill='#ffffff')
+            circle(class="skill__bg skill__bg_grey" cx='60' cy='60' r='60')
+            circle(class='skill__indicator skill__indicator_green' cx='60' cy='60' r='50' fill="none" stroke-dasharray =array+' '+offset stroke-width="20" stroke-opacity=value/100)
+            circle(class="skill_front skill__front_white" cx='60' cy='60' r='40')
         .skill__name= skill

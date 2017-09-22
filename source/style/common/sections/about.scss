@@ -1,5 +1,6 @@
 .about {
   @extend .clearfix;
+  height: rem(860px);
   &__side {
     float: left;
     width: 50%;
@@ -7,15 +8,25 @@
     height: 100%;
   }
 
+  &__title-wrapper {
+    float: left;
+    width: 50%;
+  }
+
+  &__title {
+    margin-bottom:0;
+  }
+
   &__left {
     background-color: $olive;
   }
   &__right {
-
+    background-color: $about-right-bg;
   }
 
   &__description {
     padding: 0 rem(80px);
+    @extend .clearfix;
   }
 
   &__utilities {
