@@ -25,7 +25,7 @@ section.about
                         li.skill-group-list__item
                             .skill-group-list__title= item
                             ul.skills-list
-                                each skill in skillGroup
+                                each value, skill in skillGroup
                                     li.skills-list__item
-                                        +circle(skill,'40')
+                                        +circle(skill,value)
         +triangle('right','white')

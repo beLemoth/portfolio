@@ -82,7 +82,6 @@ mixin circle(skill,value)
             var offset = 314-array
         svg.skill__circle
             circle(cx='60' cy='60' r='60' fill='#dfdcd5')
-            circle(class='skill__indicator' cx='60' cy='60' r='50' fill='none' stroke='#74a163' stroke-dasharray =array+'' stroke-dashoffset=offset+'' stroke-width="20")
+            circle(class='skill__indicator' cx='60' cy='60' r='50' fill='none' stroke='#74a163' stroke-dasharray =array+' '+offset stroke-width="20" stroke-opacity=value/100)
             circle(cx='60' cy='60' r='40' fill='#ffffff')
-
         .skill__name= skill

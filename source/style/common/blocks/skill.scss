@@ -5,15 +5,13 @@
 
   &__circle {
     position: absolute;
+    transform: rotate(-90deg);
     width: 100%;
     height: 100%;
   }
   &__name {
     @include font-style($main-text,$green,rem(14px),1.2,0);
-  }
-
-  &__indicator {
-    //transform: rotateY(-90deg);
+    @include center();
   }
 
 }
