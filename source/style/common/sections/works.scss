@@ -1,0 +1,17 @@
+.works {
+  background-color: $works-section-bg;
+  position: relative;
+
+  &__triangle-wrapper {
+    @extend .clearfix;
+  }
+
+  &__triangle {
+    width: 50%;
+    float: left;
+  }
+
+  &__title {
+    margin-bottom: rem(35px);
+  }
+}

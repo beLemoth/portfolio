@@ -1,11 +1,18 @@
 /* socials block */
 
 .socials {
+  @extend .clearfix;
   &__item {
-    width: rem($icon-size);
-    height: rem($icon-size);
+    width: rem(32px);
+    height: rem(22px);
     position: relative;
     display: inline-block;
+    float: left;
+    margin-right: rem(25px);
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
   &__link {
     display: block;

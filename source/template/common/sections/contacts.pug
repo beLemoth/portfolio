@@ -2,9 +2,10 @@
 section.contacts
 
     .contacts__map
-    .contacts__info
-        .contacts__title.subtitle
-            | контакты
-            ul.contacts__list
-                each value, item in contacts
-                    li(class="contacts__item contacts__item_"+item)= value
+        img(src="./assets/img/map-bg.jpg" alt="map")
+    .contacts-info.contacts__info-block
+        .contacts-info__title.subtitle контакты
+        ul.contacts-info__list
+            each value, item in contacts
+                li(class="contacts-info__item contacts-info__item_"+item)= value
+                    +icon(item,'green')

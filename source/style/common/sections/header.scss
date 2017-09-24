@@ -13,8 +13,9 @@
     position: absolute;
     top: rem($margin-vert);
     right: rem($margin-side);
-    width: rem($icon-size);
-    height: rem($icon-size);
+    width: rem(32px);
+    height: rem(22px);
+    cursor: pointer;
   }
 
   &__socials {
@@ -38,8 +39,10 @@
   &__scroll-down-arrow {
     @include center('x');
     bottom: rem($margin-vert);
-    width: rem($icon-size);
-    height: rem($icon-size);
+    width: rem(30px);
+    height: rem(20px);
+    z-index: 1000;
+    cursor: pointer;
   }
 
 

@@ -1,0 +1,16 @@
+.testimonials {
+  background-color: #f4f5f0;
+  min-height: rem(1350px);
+  padding-top: rem(60px);
+  &__title {
+    max-width: rem(420px);
+    line-height: 1.2;
+    margin: auto;
+  }
+
+  &__content {
+    max-width: rem(820px);
+    margin: auto;
+    @extend .clearfix;
+  }
+}

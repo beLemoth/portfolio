@@ -1,27 +1,3 @@
-
-// header section
-mixin header(headerClass,scroll)
-    //HEADER section
-    header(class=(headerClass) ? ('header header-' + headerClass) : 'header')
-
-        .header__socials
-            +socials('header')
-
-        .header__menu
-            .burger
-                +icon('hamburger','white')
-
-        - var page = (headerClass==='about')?'portfolio':headerClass
-        svg(class='header__image')
-            use(xlink:href='./assets/img/sprite.svg#' + page + '_header')
-
-        .header__desc
-            +developer
-
-        if (scroll)
-            .header__scroll-down-arrow
-                +icon('arrow_down','white')
-
 // social icons list
 mixin socials(section)
     ul.socials
@@ -29,8 +5,7 @@ mixin socials(section)
             li.socials__item
                 - var color= (section === 'footer')?'grey':'white'
                 a(class="socials__link socials__link_" + item href= ref target="_blank")
-                +icon(item,color)
-
+                    +icon(item,color,true)
 
 // navigation menu list
 mixin nav(sectionName, sectionToPass)
@@ -38,7 +13,7 @@ mixin nav(sectionName, sectionToPass)
         each ref, name in navMenu
             if (name!==sectionToPass)
                 li(class= sectionName + '-nav__item nav__item')
-                    a(class= sectionName + '-nav__link nav__link' href= ref)
+                    a(class= sectionName + '-nav__link nav__link' href= ref)= name
 
 // developer info block
 mixin developer(section)
@@ -49,20 +24,17 @@ mixin developer(section)
         div(class= (section)?('developer__description '+section+'__developer-description'):('developer__description'))= developer.description
 
 // icon svg insert
-mixin icon(name,mod)
-    svg(class="icon icon_" + name + ' icon_' + mod)
+mixin icon(name,mod,isLink)
+    svg(class="icon icon_" + name + " icon_" + mod+((isLink)?' icon__link':''))
         use(xlink:href="assets/img/sprite.svg#" + name)
 
-// triangle insert (left||right, size, color)
-mixin triangle(pos,color)
-    -
-        var points= ''
-        if (pos==='left')
-            points= '0 0,900 100,0 100'
-        if (pos==='right')
-            points= '0 100,900 0,900 100'
-    svg(viewbox='0 0 900 100' preserveAspectRatio="none" class="triangle triangle_"+color)
-        polygon(points=points)
+// triangles insert (left||right, size, color)
+mixin triangle(leftColor,rightColor)
+    .triangles
+        svg(viewbox='0 0 900 100' preserveAspectRatio="none" class="triangle triangle_" + leftColor)
+            polygon(points='0 0,900 100,0 100')
+        svg(viewbox='0 0 900 100' preserveAspectRatio="none" class="triangle triangle_" + rightColor)
+            polygon(points='0 100,900 0,900 100')
 
 // - title insert
 mixin title(section, title, isMain)

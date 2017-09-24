@@ -3,22 +3,23 @@
 section.testimonials
 
     .testimonials__head
-        h2.testimonials__title.title Что обо мне говорят
+        +title('testimonials','Что обо мне говорят')
 
-    .testimonials-content
-    each item in testimonials
-        .testimonial
-            .testimonial__author-photo
-                img(href= item.authorPhoto alt= item.authorName)
-            .testimonial__text= item.text
-            .testimonial__author-name= item.authorName
-            .testimonial__author-desc= item.authorDesc
+    .testimonials__content
+        each item in testimonials
+            .testimonial
+                .testimonial__author-photo
+                    img(src= item.authorPhoto alt= item.authorName)
+                .testimonial__text= item.text
+                .testimonial__author-name= item.authorName
+                .testimonial__author-desc
+                    .testimonial__author-desc-text= item.authorDesc
 
     .connection
         form.connect
-            h2.connect__title.title
+            h3.connect__title.subtitle Связаться со мной
             input.connect__name(placeholder='Имя')
             input.connect__email(placeholder='Email')
             textarea.connect__text(placeholder='Ваше сообщение')
-            button.connect__send.button Отправить
+            buttongit ad.connect__send.button Отправить
             button.connect__clear.button Очистить

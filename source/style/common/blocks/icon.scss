@@ -3,20 +3,31 @@
   width: 100%;
   height: 100%;
 
+  &__link {
+    cursor: pointer;
+
+    &.icon_white {
+      &:hover {
+        fill: $light-green;
+      }
+    }
+    &.icon_grey {
+      &:hover {
+        fill: $white;
+      }
+    }
+  }
+
   &_white {
     fill: $white;
-    &:hover {
-      fill: $light-green;
-    }
   }
 
   &_grey {
-    fill: $light-grey;
-    &:hover {
-      fill: $white;
-    }
+    fill: $footer-social-icons;
   }
 
-
+  &_green {
+    fill: $light-green;
+  }
 
 }

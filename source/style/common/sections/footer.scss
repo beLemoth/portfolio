@@ -1,1 +1,79 @@
-// FOOTER
+// FOOTER section
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: rem(185px);
+
+  &__block-wrapper {
+    @extend .clearfix;
+    background-color: rgba($grey, .85);
+    height: rem(145px);
+
+  }
+  
+  &__block {
+    width: 33.333%;
+    float: left;
+    position: relative;
+    padding: rem(30px);
+    height: 100%;
+
+    &:before {
+      content: '';
+      height: rem(90px);
+      width: 100%;
+      @include center('y');
+      right: 0;
+      border-right: 1px solid $footer-social-icons;
+    }
+
+    &:last-child {
+      &:before {
+        border-right: 0;
+      }
+    }
+
+  }
+
+  &__bottom {
+    text-align: center;
+    background-color: rgba($green, .85);
+    @include font-style($light-text,$white,rem(16px),rem(40px),0);
+  }
+
+  &__desc {
+    @include font-style($light-text,$white,rem(16px),1.5,0);
+  }
+
+  &-nav {
+    margin-bottom: rem(30px);
+    position: relative;
+    z-index: 1000;
+
+    &__item {
+      display: inline-block;
+      margin-right: rem(35px);
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__link {
+      @include font-style($bold-text,$white,rem(16px),1.5,0);
+      &:hover {
+        color: $light-green;
+      }
+    }
+
+  }
+
+  &__testimonial {
+    opacity: .5;
+  }
+
+
+}
+
+

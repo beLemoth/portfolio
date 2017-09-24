@@ -1,0 +1,99 @@
+.carousel {
+  height: rem(750px);
+  @extend .clearfix;
+
+  &-preview {
+    width: 50%;
+    float: right;
+    height: rem(520px);
+    background-color: $carousel-preview-bg;
+    padding: rem(50px) rem(20px);
+    text-align: center;
+
+    &__image {
+      width: auto;
+      height: 100%;
+      display: inline-block;
+    }
+  }
+
+  &-link {
+    width: 50%;
+    float: left;
+    height: 100%;
+    position: relative;
+    background-color: $olive;
+
+    &__block {
+      @include center();
+      text-align: center;
+    }
+
+    &__desc {
+      @include font-style($medium-text,$green,rem(16px),1.5,0);
+      margin-bottom: rem(55px);
+    }
+    &__button {
+      width: rem(200px);
+      height: rem(40px);
+      line-height: rem(20px);
+      border-radius: rem(20px);
+      padding-left: rem(40px);
+      position: relative;
+    }
+
+    &__icon {
+      width: rem(15px);
+      height: rem(15px);
+      position: absolute;
+      @include center('y');
+      left: rem(15px);
+    }
+
+  }
+
+  &-control {
+    width:50%;
+    float: right;
+    height: rem(230px);
+    @extend .clearfix;
+    text-align: center;
+
+    &__prev,
+    &__next {
+      float: left;
+      width: 50%;
+      height: 100%;
+      position: relative;
+      cursor: pointer;
+    }
+
+    &__prev {
+      background-color: $carousel-down-bg;
+    }
+    &__next {
+      background-color: $carousel-up-bg;
+    }
+
+    &__image {
+      width: auto;
+      height: 100%;
+      display: inline-block;
+    }
+
+    &__button {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba($carousel-controls-bg,.7);
+    }
+
+    &__icon {
+      @include center();
+      width: rem(30px);
+      height: rem(20px);
+    }
+  }
+}

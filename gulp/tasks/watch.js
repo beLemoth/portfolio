@@ -6,6 +6,8 @@ module.exports = function() {
         $.gulp.watch('./source/style/**/*.scss', $.gulp.series('sass'));
         $.gulp.watch('./source/template/**/*.pug', $.gulp.series('pug'));
         $.gulp.watch('./source/images/**/*.*', $.gulp.series('copy:image'));
+        $.gulp.watch('./source/images/icons/*.svg', $.gulp.series('sprite:svg'));
+        $.gulp.watch('./source/images/icons/*.png', $.gulp.series('sprite:png'));
         $.gulp.watch('./source/fonts/**/*.*', $.gulp.series('copy:fonts'));
     });
 };

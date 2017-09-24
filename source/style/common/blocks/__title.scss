@@ -1,0 +1,39 @@
+.title-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.title-bg {
+  @include center();
+  height: 100%;
+  width: 100%;
+
+  &_about {
+    fill: rgba($light-green,.1);
+  }
+
+  &_works,
+  &_testimonials{
+    fill: rgba(#93c42e,.1);
+  }
+
+}
+
+.title {
+  @include font-style($title-text,$grey,rem(63px),1.2,0);
+  margin-bottom: rem(70px);
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  padding: rem(30px) 0;
+
+  &:after {
+    content: '';
+    @include center('x');
+    top: 100%;
+    height: rem(3px);
+    width: rem(90px);
+    background-color: $grey;
+  }
+
+}

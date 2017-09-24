@@ -2,14 +2,27 @@
 
 section.works
     .works-head
-        h1.works__tiltle.title Мои работы
+        +title('works','Мои работы',true)
 
     .carousel
         .carousel-preview
+            img.carousel-preview__image(src="./assets/img/work-1.png" alt="Карусель")
         .carousel-link
-            .carousel-link__title.subtitle Сайт школы онлайн образования
-            .carousel-link__decs HTML, CSS, JAVASCRIPT
-            .caousel-link__button.button Посмотреть сайт
+            .carousel-link__block
+                .carousel-link__title.subtitle Сайт школы онлайн<br> образования
+                .carousel-link__desc HTML, CSS, JAVASCRIPT
+                .carousel-link__button.button Посмотреть сайт
+                    .carousel-link__icon
+                        +icon('link','white')
         .carousel-control
-            .carousel-control__prew
+            .carousel-control__prev
+                img.carousel-control__image(src="./assets/img/work-4.png")
+                .carousel-control__button
+                    .carousel-control__icon
+                        +icon('portf_arrow_down','white')
             .carousel-control__next
+                img.carousel-control__image(src="./assets/img/work-2.png")
+                .carousel-control__button
+                    .carousel-control__icon
+                        +icon('portf_arrow_up','white')
+    +triangle('works','works')

@@ -1,0 +1,13 @@
+.contacts {
+  position: relative;
+
+  &__info-block {
+    @include center('x');
+    top: rem(350px);
+  }
+
+  &__map {
+    overflow: hidden;
+
+  }
+}

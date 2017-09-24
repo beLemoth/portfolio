@@ -1,0 +1,27 @@
+.short-testimonial {
+
+  &__text {
+    @include font-style($light-text,$white,rem(16px),1.5,0);
+    font-style: italic;
+  }
+  &__author {
+    @include font-style($bold-text,$white,rem(16px),1.5,0);
+    font-style: italic;
+    padding-left: rem(20px);
+    position: relative;
+
+
+    &:before {
+      content: '';
+      height: 1px;
+      width: rem(10px);
+      @include center('y');
+      left: 0;
+      background-color: $white;
+
+    }
+  }
+
+
+
+}

@@ -1,6 +1,7 @@
 .about {
   @extend .clearfix;
   height: rem(860px);
+  position: relative;
   &__side {
     float: left;
     width: 50%;

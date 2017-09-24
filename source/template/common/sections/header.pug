@@ -1,0 +1,19 @@
+// HEADER section
+
+header.header
+
+    .header__socials
+        +socials('header')
+
+    .header__menu
+        .burger
+            +icon('hamburger','white',true)
+
+    svg(class='header__image')
+        use(xlink:href='./assets/img/sprite.svg#portfolio_header')
+
+    .header__desc
+        +developer
+
+    .header__scroll-down-arrow
+        +icon('arrow_down','white',true)
