@@ -1,0 +1,36 @@
+.blog-titles {
+  padding: rem(65px) 0;
+
+  &__item {
+    text-align: right;
+    @include font-style($main-text,$contacts-info-text,rem(16px),1.25,0);
+    margin-bottom: rem(20px);
+    padding-right: rem(20px);
+    min-height: rem(42px);
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+
+    &.active {
+      color: $green;
+      font-family: $bold-text;
+
+
+      &:after {
+        content: '';
+        height: 100%;
+        width: 3px;
+        background-color: $green;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__text {
+    @include center('y');
+    right: rem(20px);
+  }
+
+}

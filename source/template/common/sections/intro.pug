@@ -6,17 +6,23 @@ section.intro
 
     .welcome
         .welcome__info
-            +developer
+            +developer('welcome')
         .welcome__socials
             +socials('intro')
         .welcome__navigation
-            +nav('welcome','авторизация')
+            +nav('welcome','Авторизация')
 
     .login
         .login__title.subtitle Авторизируйтесь
         form.login-form
-            input.login-form__name(placeholder='Логин')
-            input.login-form__pass(placeholder='Пароль')
+            .login-form__input
+                input.login-form__name(placeholder='Логин')
+                .login-form__icon
+                    +icon('login','grey')
+            .login-form__input
+                input.login-form__pass(placeholder='Пароль')
+                .login-form__icon
+                    +icon('password','grey')
             input.login-form__is-man(id='is-man__check' name='check' type='checkbox' value='man')
             label(for='is-man__check') Я человек
             .not-a-robot
@@ -25,7 +31,7 @@ section.intro
                 label(for='not-a-robot_yes') Да
                 input.not-a-robot__radio(id='not-a-robot_no' name='robot' type='radio' value='no')
                 label(for='not-a-robot_no') Не уверен
-            .login-form__button.button На главную
-            input.login-form__button.button(type='submit' value='Войти')
+            .login-form__button.button.button_left На главную
+            input.login-form__button.button.button_right(type='submit' value='Войти')
     .intro__footer
         .copyright=  '© '+developer.name+' 2017'

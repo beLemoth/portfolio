@@ -4,22 +4,27 @@ section.testimonials
 
     .testimonials__head
         +title('testimonials','Что обо мне говорят')
-
-    .testimonials__content
-        each item in testimonials
-            .testimonial
-                .testimonial__author-photo
-                    img(src= item.authorPhoto alt= item.authorName)
-                .testimonial__text= item.text
-                .testimonial__author-name= item.authorName
-                .testimonial__author-desc
-                    .testimonial__author-desc-text= item.authorDesc
+        .testimonials__content
+            each item in testimonials
+                .testimonial
+                    .testimonial__author-photo
+                        img(src= item.authorPhoto alt= item.authorName)
+                    .testimonial__text= item.text
+                    .testimonial__author-name= item.authorName
+                    .testimonial__author-desc
+                        .testimonial__author-desc-text= item.authorDesc
 
     .connection
         form.connect
             h3.connect__title.subtitle Связаться со мной
             input.connect__name(placeholder='Имя')
+            br
             input.connect__email(placeholder='Email')
+            br
             textarea.connect__text(placeholder='Ваше сообщение')
-            buttongit ad.connect__send.button Отправить
-            button.connect__clear.button Очистить
+            br
+            button.connect__send.button.button_left Отправить
+            button.connect__clear.button.button_right Очистить
+
+    .testimonials__up-arrow
+        +icon('portf_arrow_up','white',true)

@@ -1,0 +1,59 @@
+.welcome {
+  @include center();
+  width: rem(380px);
+  height: rem(400px);
+  background-color: rgba($welcome-bg,.6);
+  border-radius: rem(10px);
+  padding-top: rem(48px);
+
+  display: none;
+
+  &__info {
+    margin-bottom: rem(40px);
+  }
+  &__socials {
+    width: rem(146px);
+    margin: auto;
+  }
+  &__navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__developer-description {
+    opacity: .8;
+  }
+
+  &-nav {
+    @extend .clearfix;
+
+    &__item {
+      @extend .button;
+      @extend .button_center;
+      height: rem(45px);
+      float: left;
+      text-align: center;
+      padding: 0 rem(30.9px);
+      line-height: rem(45px);
+
+      &__link {
+        @include font-style($medium-text,$white,rem(16px),1.2,0);
+
+      }
+
+      &:first-child {
+        @extend .button_left;
+        border-right-width: 2px;
+      }
+      &:last-child {
+        @extend .button_right;
+        border-left-width: 2px;
+      }
+    }
+
+  }
+
+
+}

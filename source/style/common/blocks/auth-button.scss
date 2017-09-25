@@ -1,0 +1,18 @@
+.auth-button {
+  border: 1px solid $white;
+  border-radius: rem(22.5px);
+  height: rem(45px);
+  @include font-style($main-text,$white,rem(16px),rem(42px),0);
+  text-align: center;
+  padding: 0 rem(30px);
+  display: inline-block;
+  position: absolute;
+  right: rem(100px);
+  top: rem(25px);
+
+  &:hover {
+    cursor: pointer;
+    background-color: $green;
+    border-color: #729e19;
+  }
+}

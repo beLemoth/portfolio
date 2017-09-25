@@ -1,16 +1,30 @@
 .testimonials {
+  background: url('../img/testimonials-bg.png') center top no-repeat;
+  background-size: cover;
   background-color: #f4f5f0;
-  min-height: rem(1350px);
+  min-height: rem(1360px);
   padding-top: rem(60px);
+  padding-bottom: rem(185px);
+
+
+
   &__title {
     max-width: rem(420px);
     line-height: 1.2;
     margin: auto;
+    margin-bottom: rem(10px);
   }
 
   &__content {
     max-width: rem(820px);
     margin: auto;
     @extend .clearfix;
+  }
+
+  &__up-arrow {
+    position: relative;
+    width: rem(30px);
+    height: rem(20px);
+    margin: rem(60px) auto;
   }
 }

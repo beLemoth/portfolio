@@ -1,0 +1,70 @@
+.login-form {
+
+  text-align: center;
+
+  &__input {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(45px);
+    height: rem(45px);
+    background-color: #f0efe9;
+    border-radius: rem(22.5px) 0 0 rem(22.5px);
+
+  }
+
+  &__name,
+  &__pass {
+    height: rem(45px);
+    @include font-style($main-text,$light-grey,rem(16px),rem(45px),0);
+
+    padding-left: rem(60px);
+    padding-right: rem(22.5px);
+
+    border-radius: rem(22.5px);
+    border: 0;
+    width: 100%;
+    margin-bottom: rem(20px);
+
+    &::placeholder {
+      color: rgba($input-text,.5);
+    }
+  }
+
+  &__is-man {
+    margin-bottom: rem(20px);
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: rem(45px);
+    @include font-style($medium-text,$white,rem(16px),rem(45px),0);
+    padding: 0;
+
+    &.button_left {
+      left: 0;
+    }
+    &.button_right {
+      right: 0;
+    }
+  }
+
+  label {
+    color: $white;
+    opacity: .8;
+  }
+
+  .not-a-robot {
+    &__title {
+      @include font-style($bold-text,$white,rem(16px),1.5,0);
+      margin-bottom: rem(5px);
+    }
+
+  }
+}

@@ -1,12 +1,25 @@
 .button {
-  background-color: $light-green;
+  background-color: rgba($light-green,.9);
   display: inline-block;
   @include font-style($medium-text,$white,rem(16px),rem(20px),0);
   padding: rem(10px) rem(20px);
   border-radius: rem(10px);
   cursor: pointer;
+  border: 0;
 
   &:hover {
-    background-color: $green;
+    background-color: rgba($green,.9);
+  }
+
+  &_left {
+    border-radius: 0 0 0 rem(10px);
+    border-right: 1px solid rgba($button-border,.5);
+  }
+  &_right {
+    border-radius: 0 0 rem(10px) 0;
+    border-left: 1px solid rgba($button-border,.5);
+  }
+  &_center {
+    border-radius: 0;
   }
 }

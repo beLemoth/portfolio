@@ -1,0 +1,15 @@
+// INTRO section
+
+.intro {
+  background: url('../img/intro-bg.jpg') center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+
+  &__footer {
+    @include center('x');
+    bottom: rem(40px);
+    @include font-style($main-text,$white,rem(16px),1.5,0);
+  }
+}

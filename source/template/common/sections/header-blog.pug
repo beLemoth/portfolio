@@ -1,0 +1,19 @@
+// HEADER section
+
+header.header-blog
+
+    .header__socials
+        +socials('header')
+
+    .header__menu
+        .burger
+            +icon('hamburger','white',true)
+
+    .header-blog__intro
+        .header__author-photo
+            img(src=developer.photo alt=developer.name)
+
+        +title('blog','Блог',true)
+
+        .header-blog__text Статьи, которые я написал
+

@@ -4,7 +4,7 @@
   text-align: center;
   z-index: 100;
   &__name {
-    @include font-style($medium-text,$white,rem(35px),1.5,0)
+    @include font-style($medium-text,$white,rem(35px),1.2,0)
   }
 
   &__description {

@@ -1,0 +1,33 @@
+// BLOG section
+
+.blog {
+
+  position: relative;
+  background-color: $blog-bg;
+  padding-bottom: rem(185px);
+  @extend .clearfix;
+  &__title {
+    margin-bottom: rem(25px);
+    color: $white;
+    padding: rem(25px) 0;
+    
+    &:after {
+      background-color: #fff;
+    }
+  }
+
+  &__aside {
+    width: 25%;
+    float: left;
+    padding-left: rem(110px);
+    padding-right: rem(60px);
+  }
+
+  &__content {
+    width: 75%;
+    float: left;
+    padding-left: rem(60px);
+    padding-right: rem(315px);
+  }
+
+}

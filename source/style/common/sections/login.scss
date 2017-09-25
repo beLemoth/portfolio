@@ -1,0 +1,21 @@
+// LOGIN section
+
+.login {
+  width: rem(380px);
+  height: rem(425px);
+  @include center();
+  background-color: rgba($welcome-bg,.6);
+  border-radius: rem(10px);
+  padding: rem(20px);
+  padding-bottom: rem(65px);
+  position: relative;
+
+  &__title {
+    margin-bottom: rem(30px);
+    color: $white;
+
+    &:after {
+      background-color: $white;
+    }
+  }
+}

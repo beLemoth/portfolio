@@ -1,0 +1,18 @@
+// HEADER-BLOG section
+
+.header-blog {
+  height: rem(440px);
+  position: relative;
+  background: url('../img/intro-bg.jpg') center no-repeat;
+  background-size: cover;
+
+  &__intro {
+    text-align: center;
+    @include center();
+  }
+
+  &__text {
+    @include font-style($main-text,$white,rem(16px),1.2,0);
+  }
+
+}
