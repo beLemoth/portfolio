@@ -15,6 +15,11 @@
     background-color: #f0efe9;
     border-radius: rem(22.5px) 0 0 rem(22.5px);
 
+    .icon {
+      @include center('y');
+      left: rem(15px);
+    }
+
   }
 
   &__name,
