@@ -1,7 +1,7 @@
 //HEADER
 
 .header {
-  height: rem(600px);
+  height: rem(582px);
   position: relative;
   background: url('../img/intro-bg.jpg') center no-repeat;
   background-size: cover;
@@ -16,6 +16,8 @@
     width: rem(32px);
     height: rem(22px);
     cursor: pointer;
+
+    z-index: 100600;
   }
 
   &__socials {

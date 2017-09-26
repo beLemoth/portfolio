@@ -10,6 +10,8 @@
   padding-bottom: rem(65px);
   position: relative;
 
+  display: none;
+
   &__title {
     margin-bottom: rem(30px);
     color: $white;
