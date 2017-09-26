@@ -35,6 +35,20 @@
   &_password {
     width: rem(17px);
     height: rem(17px);
+    @include center('y');
+    left: rem(15px);
+  }
+
+  &_checkbox {
+    fill: $light-green;
+    width: rem(10px);
+    height: rem(10px);
+  }
+
+  &_radio {
+    fill: $light-green;
+    width: rem(8px);
+    height: rem(8px);
   }
 
 }

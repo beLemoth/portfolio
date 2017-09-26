@@ -2,6 +2,12 @@
 
   text-align: center;
 
+  label {
+    color: $white;
+    opacity: .8;
+    @include font-style($medium-text,$white,rem(16px),1.2,0);
+  }
+
   &__input {
     position: relative;
   }
@@ -14,12 +20,6 @@
     height: rem(45px);
     background-color: #f0efe9;
     border-radius: rem(22.5px) 0 0 rem(22.5px);
-
-    .icon {
-      @include center('y');
-      left: rem(15px);
-    }
-
   }
 
   &__name,
@@ -40,8 +40,15 @@
     }
   }
 
-  &__is-man {
+  &__checkbox {
+    font-size: 0;
     margin-bottom: rem(20px);
+    height: rem(20px);
+    line-height: rem(21px);
+    input {
+      display: none;
+    }
+
   }
 
   &__button {
@@ -60,15 +67,25 @@
     }
   }
 
-  label {
-    color: $white;
-    opacity: .8;
-  }
-
   .not-a-robot {
+
     &__title {
       @include font-style($bold-text,$white,rem(16px),1.5,0);
       margin-bottom: rem(5px);
+    }
+
+    &__radio {
+      font-size: 0;
+      input {
+        display: none;
+      }
+      label {
+        margin-right: rem(35px);
+        display: inline-block;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
 
   }
