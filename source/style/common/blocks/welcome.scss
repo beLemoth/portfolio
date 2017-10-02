@@ -33,21 +33,12 @@
       height: 45px;
       float: left;
       text-align: center;
-      padding: 0 31px;
+      padding: 0 30px;
       line-height: 45px;
+      border-right-width: 2px;
 
       &__link {
         @include font-style($medium-text,$white,16px,1.2,0);
-
-      }
-
-      &:first-child {
-        @extend .button_left;
-        border-right-width: 2px;
-      }
-      &:last-child {
-        @extend .button_right;
-        border-left-width: 2px;
       }
     }
 
