@@ -9,11 +9,10 @@ header.header
         .burger
             +icon('hamburger','white',true)
 
-    svg(class='header__image')
-        use(xlink:href='./assets/img/sprite.svg#portfolio_header')
-
     .header__desc
-        +developer
+        svg(class='header__image')
+            use(xlink:href='./assets/img/sprite.svg#portfolio_header')
+        +developer('header')
 
     .header__scroll-down-arrow
         +icon('arrow_down','white',true)

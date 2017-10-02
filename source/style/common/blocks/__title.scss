@@ -1,11 +1,12 @@
 .title-wrapper {
   position: relative;
   width: 100%;
+  z-index: 100500;
 }
 
 .title-bg {
   @include center();
-  height: 100%;
+  height: auto;
   width: 100%;
 
   &_about {
@@ -34,7 +35,7 @@
   &:after {
     content: '';
     @include center('x');
-    top: 100%;
+    top: 110%;
     height: 3px;
     width: 90px;
     background-color: $grey;

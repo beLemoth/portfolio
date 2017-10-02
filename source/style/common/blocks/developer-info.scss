@@ -4,10 +4,12 @@
   &__photo {
     width: 100%;
     overflow: hidden;
+    margin-bottom: 20px;
 
-    img {
+  }
 
-    }
+  &__title {
+    margin-bottom: 47px;
   }
 
   &__text {

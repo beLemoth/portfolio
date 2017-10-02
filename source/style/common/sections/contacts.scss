@@ -3,11 +3,11 @@
 
   &__info-block {
     @include center('x');
-    top: 350px;
+    top: 328px;
   }
 
   &__map {
     overflow: hidden;
-
+    max-height: 1112px;
   }
 }

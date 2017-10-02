@@ -1,13 +1,14 @@
 .short-testimonial {
 
   &__text {
-    @include font-style($light-text,$white,16px,1.5,0);
+    @include font-style($light-text,$white,16px,1.5,-0.0125rem);
     font-style: italic;
+    margin-bottom: 3px;
   }
   &__author {
-    @include font-style($bold-text,$white,16px,1.5,0);
+    @include font-style($bold-text,$white,16px,1.5,-0.0125rem);
     font-style: italic;
-    padding-left: 20px;
+    padding-left: 15px;
     position: relative;
 
 

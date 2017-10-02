@@ -1,9 +1,18 @@
 .utilities {
 
+  &__title {
+    line-height: 1.1;
+    margin-bottom: 54px;
+
+    &:after {
+      top: 132%;
+    }
+  }
+
   &__description {
     p {
       @include font-style($main-text,$light-grey,16px,1.2,0);
-      margin-bottom: 45px;
+      margin-bottom: 50px;
     }
   }
 

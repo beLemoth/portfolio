@@ -18,10 +18,10 @@ module.exports = function() {
                 type : 'px-to-rem',
                 rootSize : 16
             }))
-            .pipe($.gp.sourcemaps.write())
             .pipe($.gp.rename({
                 suffix: '.min'
             }))
+            .pipe($.gp.sourcemaps.write())
             .pipe($.gulp.dest($.config.root+'/assets/css'))
             .pipe($.browserSync.stream());
     });

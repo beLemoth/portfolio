@@ -1,15 +1,14 @@
 .subtitle {
-  @include font-style($title-text,$light-grey,35px,1.2,0);
-  margin-bottom: 40px;
+  @include font-style($title-text,$light-grey,35px,1.4,0);
+  margin-bottom: 28px;
   text-transform: uppercase;
   position: relative;
   text-align: center;
-  padding: 20px 0;
 
   &:after {
     content: '';
     @include center('x');
-    top: 100%;
+    top: 138%;
     height: 3px;
     width: 90px;
     background-color: $light-grey;
