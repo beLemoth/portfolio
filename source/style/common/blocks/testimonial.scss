@@ -1,38 +1,38 @@
 .testimonial {
   width: 50%;
   float: left;
-  padding: rem(15px) rem(15px);
+  padding: 15px;
   position: relative;
-  margin-bottom: rem(50px);
+  margin-bottom: 50px;
   &__author-photo {
     text-align: center;
-    margin-bottom: rem(20px);
+    margin-bottom: 20px;
   }
   &__text {
-    @include font-style($main-text,$light-grey,rem(16px),1.8,0);
+    @include font-style($main-text,$light-grey,16px,1.8,0);
     font-style: italic;
-    margin-bottom: rem(20px);
+    margin-bottom: 20px;
   }
   &__author-name {
     text-align: center;
-    @include font-style($bold-text, $green, rem(16px), 1.8, 0);
+    @include font-style($bold-text, $green, 16px, 1.8, 0);
     font-style: italic;
   }
   &__author-desc {
     text-align: center;
-    @include font-style($main-text,$grey,rem(16px),1.8,0);
+    @include font-style($main-text,$grey,16px,1.8,0);
     text-align: center;
     font-style: italic;
 
     &-text {
-      padding-left: rem(20px);
+      padding-left: 20px;
       display: inline-block;
       position: relative;
 
       &:before {
         content: '';
         height: 1px;
-        width: rem(10px);
+        width: 10px;
         background-color: $grey;
         @include center('y');
         left: 0;

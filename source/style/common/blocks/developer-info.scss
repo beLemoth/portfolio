@@ -12,8 +12,8 @@
 
   &__text {
     p {
-      @include font-style($main-text,$light-grey,rem(16px),1.5,0);
-      margin-bottom: rem(10px);
+      @include font-style($main-text,$light-grey,16px,1.5,0);
+      margin-bottom: 10px;
     }
   }
 

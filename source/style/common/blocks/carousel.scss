@@ -1,13 +1,13 @@
 .carousel {
-  height: rem(750px);
+  height: 750px;
   @extend .clearfix;
 
   &-preview {
     width: 50%;
     float: right;
-    height: rem(520px);
+    height: 520px;
     background-color: $carousel-preview-bg;
-    padding: rem(50px) rem(20px);
+    padding: 50px 20px;
     text-align: center;
 
     &__image {
@@ -30,24 +30,24 @@
     }
 
     &__desc {
-      @include font-style($medium-text,$green,rem(16px),1.5,0);
-      margin-bottom: rem(55px);
+      @include font-style($medium-text,$green,16px,1.5,0);
+      margin-bottom: 55px;
     }
     &__button {
-      width: rem(200px);
-      height: rem(40px);
-      line-height: rem(20px);
-      border-radius: rem(20px);
-      padding-left: rem(40px);
+      width: 200px;
+      height: 40px;
+      line-height: 20px;
+      border-radius: 20px;
+      padding-left: 40px;
       position: relative;
     }
 
     &__icon {
-      width: rem(15px);
-      height: rem(15px);
+      width: 15px;
+      height: 15px;
       position: absolute;
       @include center('y');
-      left: rem(15px);
+      left: 15px;
     }
 
   }
@@ -55,7 +55,7 @@
   &-control {
     width:50%;
     float: right;
-    height: rem(230px);
+    height: 230px;
     @extend .clearfix;
     text-align: center;
 
@@ -92,8 +92,8 @@
 
     &__icon {
       @include center();
-      width: rem(30px);
-      height: rem(20px);
+      width: 30px;
+      height: 20px;
     }
   }
 }

@@ -9,7 +9,7 @@
 
   &__footer {
     @include center('x');
-    bottom: rem(40px);
-    @include font-style($main-text,$white,rem(16px),1.5,0);
+    bottom: 40px;
+    @include font-style($main-text,$white,16px,1.5,0);
   }
 }

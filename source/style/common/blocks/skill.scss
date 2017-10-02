@@ -1,7 +1,7 @@
 .skill {
   position: relative;
-  width: rem(120px);
-  height: rem(120px);
+  width: 120px;
+  height: 120px;
 
   &__circle {
     position: absolute;
@@ -10,7 +10,7 @@
     height: 100%;
   }
   &__name {
-    @include font-style($main-text,$green,rem(14px),1.2,0);
+    @include font-style($main-text,$green,14px,1.2,0);
     @include center();
   }
 

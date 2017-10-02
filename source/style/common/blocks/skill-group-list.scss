@@ -1,8 +1,8 @@
 .skill-group-list {
 
   &__title {
-    @include font-style($medium-text,$light-grey,rem(28px),1.5,0);
-    margin-bottom: rem(15px);
+    @include font-style($medium-text,$light-grey,28px,1.5,0);
+    margin-bottom: 15px;
   }
 
 }

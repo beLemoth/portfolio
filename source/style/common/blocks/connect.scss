@@ -1,37 +1,34 @@
 .connect {
-  max-width: rem(380px);
+  max-width: 380px;
   width: 33.333%;
   margin: auto;
-  border-radius: rem(10px);
+  border-radius: 10px;
   background-color: rgba($skill-bg,.5);
-  padding: rem(10px) rem(20px) rem(60px) rem(20px);
+  padding: 10px 20px 60px 20px;
   position: relative;
 
   &__title {
-    margin-bottom: rem(30px);
+    margin-bottom: 30px;
   }
 
   &__name,
   &__email,
   &__text {
-    border-radius: rem(22.5px);
+    border-radius: 50%;
     border: 0;
-    padding: rem(15px) rem(20px);
-    margin-bottom: rem(20px);
+    padding: 15px 20px;
+    margin-bottom: 20px;
     width: 100%;
-    @include font-style($main-text,$input-text,rem(16px),1,0);
+    @include font-style($main-text,$input-text,16px,1,0);
     background-color: rgba($white,.85);
 
     &::placeholder {
       opacity: .5;
     }
-
-
-
   }
 
   &__text {
-    height: rem(140px);
+    height: 140px;
     resize: none;
     margin-bottom: 0;
   }
@@ -41,7 +38,7 @@
     position: absolute;
     bottom: 0;
     width: 50%;
-    @include font-style($medium-text,$white,rem(16px),1.5,0);
+    @include font-style($medium-text,$white,16px,1.5,0);
   }
 
   &__send {

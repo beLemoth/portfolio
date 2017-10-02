@@ -1,16 +1,16 @@
 .welcome {
   @include center();
-  width: rem(380px);
-  height: rem(400px);
+  width: 380px;
+  height: 400px;
   background-color: rgba($welcome-bg,.6);
-  border-radius: rem(10px);
-  padding-top: rem(48px);
+  border-radius: 10px;
+  padding-top: 48px;
 
   &__info {
-    margin-bottom: rem(40px);
+    margin-bottom: 40px;
   }
   &__socials {
-    width: rem(146px);
+    width: 146px;
     margin: auto;
   }
   &__navigation {
@@ -30,14 +30,14 @@
     &__item {
       @extend .button;
       @extend .button_center;
-      height: rem(45px);
+      height: 45px;
       float: left;
       text-align: center;
-      padding: 0 rem(30.9px);
-      line-height: rem(45px);
+      padding: 0 31px;
+      line-height: 45px;
 
       &__link {
-        @include font-style($medium-text,$white,rem(16px),1.2,0);
+        @include font-style($medium-text,$white,16px,1.2,0);
 
       }
 

@@ -2,8 +2,8 @@
 
   &__description {
     p {
-      @include font-style($main-text,$light-grey,rem(16px),1.2,0);
-      margin-bottom: rem(45px);
+      @include font-style($main-text,$light-grey,16px,1.2,0);
+      margin-bottom: 45px;
     }
   }
 

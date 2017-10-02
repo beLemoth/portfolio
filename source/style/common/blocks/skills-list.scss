@@ -1,11 +1,11 @@
 .skills-list {
   width: 100%;
   @extend .clearfix;
-  margin-bottom: rem(20px);
+  margin-bottom: 20px;
   &__item {
     float: left;
     max-width: 25%;
-    margin-right: rem(40px);
+    margin-right: 40px;
 
     &:last-child {
       margin-right: 0;

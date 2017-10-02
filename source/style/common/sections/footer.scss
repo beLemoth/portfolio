@@ -5,12 +5,12 @@
   bottom: 0;
   left: 0;
   right: 0;
-  min-height: rem(185px);
+  min-height: 185px;
 
   &__block-wrapper {
     @extend .clearfix;
     background-color: rgba($grey, .85);
-    height: rem(145px);
+    height: 145px;
 
   }
   
@@ -18,12 +18,12 @@
     width: 33.333%;
     float: left;
     position: relative;
-    padding: rem(30px);
+    padding: 30px;
     height: 100%;
 
     &:before {
       content: '';
-      height: rem(90px);
+      height: 90px;
       width: 100%;
       @include center('y');
       right: 0;
@@ -41,27 +41,27 @@
   &__bottom {
     text-align: center;
     background-color: rgba($green, .85);
-    @include font-style($light-text,$white,rem(16px),rem(40px),0);
+    @include font-style($light-text,$white,16px,40px,0);
   }
 
   &__desc {
-    @include font-style($light-text,$white,rem(16px),1.5,0);
+    @include font-style($light-text,$white,16px,1.5,0);
   }
 
   &-nav {
-    margin-bottom: rem(30px);
+    margin-bottom: 30px;
     position: relative;
     z-index: 1000;
 
     &__item {
       display: inline-block;
-      margin-right: rem(35px);
+      margin-right: 35px;
       &:last-child {
         margin-right: 0;
       }
     }
     &__link {
-      @include font-style($bold-text,$white,rem(16px),1.5,0);
+      @include font-style($bold-text,$white,16px,1.5,0);
       &:hover {
         color: $light-green;
       }

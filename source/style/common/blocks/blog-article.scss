@@ -1,18 +1,18 @@
 .blog-article {
-  padding: rem(65px) 0;
+  padding: 65px 0;
   position: relative;
   &__title {
-    @include font-style($bold-text,$contacts-info-text,rem(35px),1.2,0);
-    margin-bottom: rem(20px);
+    @include font-style($bold-text,$contacts-info-text,35px,1.2,0);
+    margin-bottom: 20px;
   }
   &__date {
-    @include font-style($main-text,$green,rem(16px),1.2,0);
-    margin-bottom: rem(20px);
+    @include font-style($main-text,$green,16px,1.2,0);
+    margin-bottom: 20px;
   }
   &__text {
     p {
-      @include font-style($main-text,$contacts-info-text,rem(16px),1.625,0);
-      margin-bottom: rem(15px);
+      @include font-style($main-text,$contacts-info-text,16px,1.625,0);
+      margin-bottom: 15px;
     }
   }
 
@@ -20,8 +20,8 @@
     content: '';
     position: absolute;
     bottom: 0;
-    width: rem(680px);
-    height: rem(5px);
+    width: 680px;
+    height: 5px;
     background-color: rgba($grey,.07);
   }
 }

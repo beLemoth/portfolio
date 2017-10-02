@@ -5,7 +5,7 @@
   label {
     color: $white;
     opacity: .8;
-    @include font-style($medium-text,$white,rem(16px),1.2,0);
+    @include font-style($medium-text,$white,16px,1.2,0);
   }
 
   &__input {
@@ -16,24 +16,24 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: rem(45px);
-    height: rem(45px);
+    width: 45px;
+    height: 45px;
     background-color: #f0efe9;
-    border-radius: rem(22.5px) 0 0 rem(22.5px);
+    border-radius: 50% 0 0 50%;
   }
 
   &__name,
   &__pass {
-    height: rem(45px);
-    @include font-style($main-text,$light-grey,rem(16px),rem(45px),0);
+    height: 45px;
+    @include font-style($main-text,$light-grey,16px,45px,0);
 
-    padding-left: rem(60px);
-    padding-right: rem(22.5px);
+    padding-left: 60px;
+    padding-right: 22.5px;
 
-    border-radius: rem(22.5px);
+    border-radius: 22.5px;
     border: 0;
     width: 100%;
-    margin-bottom: rem(20px);
+    margin-bottom: 20px;
 
     &::placeholder {
       color: rgba($input-text,.5);
@@ -42,9 +42,9 @@
 
   &__checkbox {
     font-size: 0;
-    margin-bottom: rem(20px);
-    height: rem(20px);
-    line-height: rem(21px);
+    margin-bottom: 20px;
+    height: 20px;
+    line-height: 21px;
     input {
       display: none;
     }
@@ -55,8 +55,8 @@
     position: absolute;
     bottom: 0;
     width: 50%;
-    height: rem(45px);
-    @include font-style($medium-text,$white,rem(16px),rem(45px),0);
+    height: 45px;
+    @include font-style($medium-text,$white,16px,45px,0);
     padding: 0;
 
     &.button_left {
@@ -70,8 +70,8 @@
   .not-a-robot {
 
     &__title {
-      @include font-style($bold-text,$white,rem(16px),1.5,0);
-      margin-bottom: rem(5px);
+      @include font-style($bold-text,$white,16px,1.5,0);
+      margin-bottom: 5px;
     }
 
     &__radio {
@@ -80,7 +80,7 @@
         display: none;
       }
       label {
-        margin-right: rem(35px);
+        margin-right: 35px;
         display: inline-block;
         &:last-child {
           margin-right: 0;

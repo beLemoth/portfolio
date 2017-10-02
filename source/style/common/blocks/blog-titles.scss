@@ -1,12 +1,12 @@
 .blog-titles {
-  padding: rem(65px) 0;
+  padding: 65px 0;
 
   &__item {
     text-align: right;
-    @include font-style($main-text,$contacts-info-text,rem(16px),1.25,0);
-    margin-bottom: rem(20px);
-    padding-right: rem(20px);
-    min-height: rem(42px);
+    @include font-style($main-text,$contacts-info-text,16px,1.25,0);
+    margin-bottom: 20px;
+    padding-right: 20px;
+    min-height: 42px;
     vertical-align: middle;
     position: relative;
     cursor: pointer;
@@ -30,7 +30,7 @@
 
   &__text {
     @include center('y');
-    right: rem(20px);
+    right: 20px;
   }
 
 }

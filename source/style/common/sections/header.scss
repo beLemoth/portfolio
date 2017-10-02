@@ -1,7 +1,7 @@
 //HEADER
 
 .header {
-  height: rem(582px);
+  height: 582px;
   position: relative;
   background: url('../img/intro-bg.jpg') center no-repeat;
   background-size: cover;
@@ -11,10 +11,10 @@
 
   &__menu {
     position: absolute;
-    top: rem($margin-vert);
-    right: rem($margin-side);
-    width: rem(32px);
-    height: rem(22px);
+    top: $margin-vert;
+    right: $margin-side;
+    width: 32px;
+    height: 22px;
     cursor: pointer;
 
     z-index: 100600;
@@ -22,8 +22,8 @@
 
   &__socials {
     position: absolute;
-    top: rem($margin-vert);
-    left: rem($margin-side);
+    top: $margin-vert;
+    left: $margin-side;
   }
 
   &__desc {
@@ -40,9 +40,9 @@
 
   &__scroll-down-arrow {
     @include center('x');
-    bottom: rem($margin-vert);
-    width: rem(30px);
-    height: rem(20px);
+    bottom: $margin-vert;
+    width: 30px;
+    height: 20px;
     z-index: 1000;
     cursor: pointer;
   }
