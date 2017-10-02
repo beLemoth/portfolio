@@ -2354,6 +2354,14 @@ gulp-concat@^2.6.1:
     through2 "^2.0.0"
     vinyl "^2.0.0"
 
+gulp-css-unit@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/gulp-css-unit/-/gulp-css-unit-1.2.2.tgz#f4de18ac780d35c6860501420a077caab2961076"
+  dependencies:
+    gulp-util "^3.0.7"
+    lodash.floor "^4.0.2"
+    through2 "^2.0.1"
+
 gulp-csso@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/gulp-csso/-/gulp-csso-3.0.0.tgz#13d0add6663f4ca398f4d414ff8dcc349b219b2c"
@@ -2510,7 +2518,7 @@ gulp-uglyfly@^1.4.2:
     uglyfly-js "^3.2.2"
     vinyl-buffer "^1.0.0"
 
-"gulp-util@>=3.0.0 <4.0.0-0", gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.1, gulp-util@^3.0.2, gulp-util@^3.0.4, gulp-util@^3.0.6, gulp-util@^3.0.8, gulp-util@~3.0.1, gulp-util@~3.0.8:
+"gulp-util@>=3.0.0 <4.0.0-0", gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.1, gulp-util@^3.0.2, gulp-util@^3.0.4, gulp-util@^3.0.6, gulp-util@^3.0.7, gulp-util@^3.0.8, gulp-util@~3.0.1, gulp-util@~3.0.8:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   dependencies:
@@ -3592,6 +3600,10 @@ lodash.filter@^4.4.0:
 lodash.flatten@^4.2.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.flatten/-/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
+
+lodash.floor@^4.0.2:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/lodash.floor/-/lodash.floor-4.0.4.tgz#11401c54238723fb4d618be752e4d96eb3fcab54"
 
 lodash.foreach@^4.3.0:
   version "4.5.0"

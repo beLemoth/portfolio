@@ -14,6 +14,10 @@ module.exports = function() {
                 browsers: $.config.autoprefixerConfig
             }))
             .pipe($.gp.csso())
+            .pipe($.gp.cssUnit({
+                type : 'px-to-rem',
+                rootSize : 16
+            }))
             .pipe($.gp.sourcemaps.write())
             .pipe($.gp.rename({
                 suffix: '.min'
@@ -21,5 +25,4 @@ module.exports = function() {
             .pipe($.gulp.dest($.config.root+'/assets/css'))
             .pipe($.browserSync.stream());
     });
-
 };
