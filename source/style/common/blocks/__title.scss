@@ -18,8 +18,10 @@
     fill: rgba(#93c42e,.1);
   }
 
-  &_blog {
+  &_header-blog {
     fill: rgba($white,.12);
+    width: 300px;
+    height: 200px;
   }
 
 }

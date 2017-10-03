@@ -6,28 +6,17 @@
   background-color: $blog-bg;
   padding-bottom: 185px;
   @extend .clearfix;
-  &__title {
-    margin-bottom: 25px;
-    color: $white;
-    padding: 25px 0;
-    
-    &:after {
-      background-color: #fff;
-    }
-  }
 
   &__aside {
     width: 25%;
     float: left;
-    padding-left: 110px;
-    padding-right: 60px;
+    padding: 0 60px 0 15px;
   }
 
   &__content {
     width: 75%;
     float: left;
-    padding-left: 60px;
-    padding-right: 315px;
+    padding: 0 15px 0 60px;
   }
 
 }

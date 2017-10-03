@@ -1,14 +1,26 @@
 // HEADER-BLOG section
 
 .header-blog {
-  height: 440px;
+  height: 435px;
   position: relative;
   background: url('../img/intro-bg.jpg') center no-repeat;
   background-size: cover;
 
+  &__title {
+    margin-bottom: 40px;
+    color: $white;
+
+    &:after {
+      background-color: #fff;
+    }
+  }
+
+
   &__intro {
     text-align: center;
-    @include center();
+    width: 100%;
+    position: absolute;
+    top: 82px;
   }
 
   &__text {
