@@ -6,21 +6,21 @@
   margin-bottom: 50px;
   &__author-photo {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   &__text {
-    @include font-style($main-text,$light-grey,16px,1.8,0);
+    @include font-style($main-text,$light-grey,16px,1.6,0);
     font-style: italic;
     margin-bottom: 20px;
   }
   &__author-name {
     text-align: center;
-    @include font-style($bold-text, $green, 16px, 1.8, 0);
+    @include font-style($bold-text, $green, 16px, 1.5, 0);
     font-style: italic;
   }
   &__author-desc {
     text-align: center;
-    @include font-style($main-text,$grey,16px,1.8,0);
+    @include font-style($main-text,$grey,16px,1.5,0);
     text-align: center;
     font-style: italic;
 

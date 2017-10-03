@@ -1,23 +1,26 @@
 .connect {
-  max-width: 380px;
-  width: 33.333%;
+  width: 380px;
   margin: auto;
   border-radius: 10px;
   background-color: rgba($skill-bg,.5);
-  padding: 10px 20px 60px 20px;
+  padding: 25px 20px 60px 20px;
   position: relative;
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+
+    &:after {
+      top: 65px;
+    }
   }
 
   &__name,
   &__email,
   &__text {
-    border-radius: 50%;
+    border-radius: 22.5px;
     border: 0;
     padding: 15px 20px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     width: 100%;
     @include font-style($main-text,$input-text,16px,1,0);
     background-color: rgba($white,.85);
@@ -37,6 +40,7 @@
   &__clear {
     position: absolute;
     bottom: 0;
+    height: 45px;
     width: 50%;
     @include font-style($medium-text,$white,16px,1.5,0);
   }
