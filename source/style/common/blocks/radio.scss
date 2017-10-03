@@ -3,7 +3,7 @@
   height: 20px;
   display: inline-block;
   background-color: $white;
-  border-radius: 50%;
-  margin-right: 5px;
-  padding: 6px;
+  border-radius: 10px;
+  @include center('y');
+  left: 0;
 }

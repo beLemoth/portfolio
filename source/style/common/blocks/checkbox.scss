@@ -4,6 +4,6 @@
   display: inline-block;
   background-color: $white;
   border-radius: 2px;
-  margin-right: 5px;
-  padding: 5px;
+  @include center('y');
+  left: 0;
 }

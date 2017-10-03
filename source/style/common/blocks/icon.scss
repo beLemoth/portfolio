@@ -40,15 +40,19 @@
   }
 
   &_checkbox {
-    fill: $light-green;
+    fill: $white;
     width: 10px;
     height: 10px;
+    @include center('y');
+    left: 5px;
   }
 
   &_radio {
-    fill: $light-green;
+    fill: $white;
     width: 8px;
     height: 8px;
+    @include center('y');
+    left: 6px;
   }
 
 }
