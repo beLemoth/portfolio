@@ -27,7 +27,7 @@
     height: 45px;
     @include font-style($main-text,$light-grey,16px,45px,0);
 
-    padding-left: 60px;
+    padding-left: 65px;
     padding-right: 22.5px;
 
     border-radius: 22.5px;
@@ -42,7 +42,7 @@
 
   &__checkbox {
     font-size: 0;
-    margin-bottom: 20px;
+    margin-bottom: 13px;
     height: 20px;
     line-height: 21px;
     input {

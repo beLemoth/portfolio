@@ -2,7 +2,6 @@
   background-color: rgba($light-green,.9);
   display: inline-block;
   @include font-style($medium-text,$white,16px,20px,0);
-  padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
   border: 0;
@@ -13,13 +12,14 @@
 
   &_left {
     border-radius: 0 0 0 10px;
-    border-right: 1px solid rgba($button-border,.5);
+    border-right: 2px solid rgba($button-border,.5);
   }
   &_right {
     border-radius: 0 0 10px 0;
-    border-left: 1px solid rgba($button-border,.5);
+    border-right: 0;
   }
   &_center {
     border-radius: 0;
+    border-right: 2px solid rgba($button-border,.5);
   }
 }

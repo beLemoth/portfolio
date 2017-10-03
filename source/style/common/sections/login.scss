@@ -10,10 +10,10 @@
   padding-bottom: 65px;
   position: relative;
 
-  display: none;
 
   &__title {
-    margin-bottom: 30px;
+    line-height: 1.8;
+    margin-bottom: 45px;
     color: $white;
 
     &:after {
