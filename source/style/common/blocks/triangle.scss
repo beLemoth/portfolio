@@ -6,6 +6,19 @@
   height: 153px;
   width: 100%;
   @extend .clearfix;
+
+  @include desktop {
+    height: 100px;
+  }
+
+  @include tablet {
+    height: 75px;
+  }
+
+  @include phone {
+    height: 50px;
+  }
+
 }
 
 .triangle {

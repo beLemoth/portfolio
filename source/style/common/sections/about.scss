@@ -1,20 +1,46 @@
 .about {
   @extend .clearfix;
-  height: 855px;
+  min-height: 855px;
   position: relative;
+  background-color: $about-right-bg;
+
+  @include tablet {
+    .triangle {
+      fill: $olive;
+    }
+  }
 
   &__side {
     float: left;
     width: 50%;
     position: relative;
-    height: 100%;
-    padding: 0 18px;
-    @extend .clearfix;
+
+    @include tablet {
+      float: none;
+      width: 100%;
+    }
   }
 
   &__title-wrapper {
     float: left;
     width: 50%;
+
+    @include desktop {
+      float: none;
+      width: 60%;
+      margin: auto;
+      margin-bottom: 35px;
+    }
+
+    @include tablet {
+      max-width: 350px;
+      margin-bottom: 60px;
+    }
+
+    @include phone {
+      min-width: 95%;
+      width: 95%;
+    }
   }
 
   &__title {
@@ -24,6 +50,10 @@
 
   &__left {
     background-color: $olive;
+
+    @include tablet {
+      padding: 30px 0;
+    }
   }
   &__right {
     background-color: $about-right-bg;
@@ -31,10 +61,26 @@
 
   &__description {
     @extend .clearfix;
-    padding-top: 20px;
+    padding: 20px 0;
+    padding-right: 18px;
+    min-height: 860px;
+
+    @include desktop {
+      min-height: 0;
+    }
+
+    @include tablet {
+      padding: 0;
+      width: 100%;
+    }
   }
 
   &__utilities {
-    padding: 15px 35px;
+    padding: 10px 35px;
+    padding-right: 0;
+
+    @include tablet {
+      padding: 30px 0;
+    }
   }
 }

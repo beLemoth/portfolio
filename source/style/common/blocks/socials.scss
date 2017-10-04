@@ -2,6 +2,7 @@
 
 .socials {
   @extend .clearfix;
+
   &__item {
     width: 32px;
     height: 22px;
@@ -9,6 +10,10 @@
     display: inline-block;
     float: left;
     margin-right: 25px;
+
+    @include phone {
+      float: none;
+    }
 
     &:last-child {
       margin-right: 0;

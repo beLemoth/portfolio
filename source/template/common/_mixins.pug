@@ -1,6 +1,6 @@
 // social icons list
 mixin socials(section)
-    ul.socials
+    ul(class= (section)?('socials '+section+'__socials'):('socials'))
         each ref, item in socials
             li.socials__item
                 - var color= (section === 'footer' || section==='intro')?'grey':'white'
@@ -48,11 +48,11 @@ mixin title(section, title, isMain)
 
 // - skill circle
 mixin circle(skill,value)
-    div(class="skill skill_" + skill viewbox='0 0 120 120' preserveAspectRatio='none')
+    div(class="skill skill_" + skill)
         -
             var array = 3.14*value
             var offset = 314-array
-        svg.skill__circle
+        svg.skill__circle(viewbox='0 0 120 120' preserveAspectRatio='none')
             circle(class="skill__bg skill__bg_grey" cx='60' cy='60' r='60')
             circle(class='skill__indicator skill__indicator_green' cx='60' cy='60' r='50' fill="none" stroke-dasharray =array+' '+offset stroke-width="20" stroke-opacity=value/100)
             circle(class="skill_front skill__front_white" cx='60' cy='60' r='40')

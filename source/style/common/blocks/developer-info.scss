@@ -1,10 +1,32 @@
 .developer-info {
   width: 50%;
   float: right;
+
+  @include desktop {
+    float: none;
+    width: 75%;
+    margin: auto;
+  }
+
+  @include tablet {
+    width: 95%;
+    max-width: 475px;
+  }
+
+  @include phone {
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+  }
+
   &__photo {
     width: 100%;
     overflow: hidden;
     margin-bottom: 20px;
+
+    @include desktop {
+      text-align: center;
+    }
 
   }
 
@@ -13,6 +35,12 @@
   }
 
   &__text {
+
+    @include phone {
+      width: 100%;
+      padding: 0 15px;
+    }
+
     p {
       @include font-style($main-text,$light-grey,16px,1.5,0);
       margin-bottom: 10px;

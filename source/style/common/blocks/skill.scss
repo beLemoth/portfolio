@@ -3,6 +3,10 @@
   width: 120px;
   height: 120px;
 
+  @include tablet {
+    text-align: left;
+  }
+
   &__circle {
     position: absolute;
     transform: rotate(-90deg);

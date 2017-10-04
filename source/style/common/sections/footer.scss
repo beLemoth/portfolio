@@ -10,8 +10,15 @@
   &__block-wrapper {
     @extend .clearfix;
     background-color: rgba($grey, .85);
-    height: 145px;
+    min-height: 145px;
 
+    @include tablet {
+      padding-top: 15px;
+    }
+
+    @include phone {
+      padding-top: 0;
+    }
   }
   
   &__block {
@@ -21,6 +28,26 @@
     padding: 25px 30px;
     height: 100%;
 
+    @include media (1100px) {
+      padding: 25px 15px;
+    }
+
+    @include tablet {
+      width: 50%;
+      padding: 0 20px;
+      height: 90px;
+      margin-bottom: 30px;
+    }
+
+    @include phone {
+      width: 100%;
+      text-align: center;
+      float: none;
+      height: auto;
+      padding: 20px 15px;
+      margin-bottom: 0;
+    }
+
     &:before {
       content: '';
       height: 90px;
@@ -28,11 +55,45 @@
       @include center('y');
       right: 0;
       border-right: 1px solid $footer-social-icons;
+
+
+      @include tablet {
+        bottom: 0;
+      }
+
+      @include phone {
+        width: 80%;
+        height: 2px;
+        background-color: $footer-social-icons;
+        left: 10%;
+        top: 100%;
+      }
     }
 
     &:last-child {
       &:before {
         border-right: 0;
+      }
+
+      @include tablet {
+        width: 100%;
+        margin-bottom: 0;
+      }
+
+      @include phone {
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      padding-right: 0;
+
+      @include tablet {
+        &:before {
+          border-right: 0;
+        }
       }
     }
 
@@ -46,19 +107,32 @@
 
   &__desc {
     @include font-style($light-text,$white,16px,1.5,0);
+    max-width: 400px;
+
+    @include tablet {
+      max-width: 100%;
+      padding: 0 15px;
+    }
   }
 
   &-nav {
     margin-bottom: 23px;
     position: relative;
     z-index: 1000;
+    width: 100%;
 
     &__item {
+      font-size: 0;
       display: inline-block;
-      margin-right: 35px;
+      margin-right: (35/600)*100%;
       &:last-child {
         margin-right: 0;
       }
+
+      @include media(1300px) {
+        margin-right: (20/600)*100%;
+      }
+
     }
     &__link {
       @include font-style($bold-text,$white,16px,1.5,0);

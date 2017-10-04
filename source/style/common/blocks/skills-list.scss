@@ -4,11 +4,26 @@
 
   &__item {
     float: left;
-    max-width: 25%;
-    margin-right: 40px;
+    margin-right: (40px/900px)*100%;
+
+    @include tablet {
+      float: none;
+      display: inline-block;
+    }
+
+    @include phone {
+      margin: 0 (15px/900px)*100%;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
 
     &:last-child {
       margin-right: 0;
     }
+
+
   }
 }

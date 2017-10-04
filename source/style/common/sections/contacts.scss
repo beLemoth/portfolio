@@ -4,10 +4,22 @@
   &__info-block {
     @include center('x');
     top: 328px;
+
+    @include tablet {
+      top: 170px;
+    }
+
+    @include phone {
+      top: 0;
+    }
   }
 
   &__map {
     overflow: hidden;
     max-height: 1112px;
+
+    @include tablet {
+      max-height: 900px;
+    }
   }
 }
