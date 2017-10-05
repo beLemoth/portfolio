@@ -4,13 +4,18 @@
   width: 95%;
   max-width: 380px;
 
-  @include center();
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -190px;
   background-color: rgba($welcome-bg,.6);
   border-radius: 10px;
   padding: 20px;
   padding-bottom: 65px;
-  position: relative;
 
+  transform: rotateY(90deg);
+  transition: transform .3s ease-out;
 
   &__title {
     line-height: 1.8;

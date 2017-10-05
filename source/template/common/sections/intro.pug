@@ -2,44 +2,50 @@
 
 section.intro
 
+    input.flip(type='checkbox' id='flipper' name='flipper')
+
     .auth-button Авторизироваться
+        label.flip__label(for='flipper')
 
-    .welcome
-        .welcome__info
-            +developer('welcome')
-        .welcome__socials
-            +socials('intro')
-        .welcome__navigation
-            +nav('welcome','Авторизация')
+    .intro__wrapper
+        .welcome
+            .welcome__info
+                +developer('welcome')
+            .welcome__socials
+                +socials('intro')
+            .welcome__navigation
+                +nav('welcome','Авторизация')
 
-    .login
-        .login__title.subtitle Авторизируйтесь
-        form.login-form
-            .login-form__input
-                input.login-form__name(placeholder='Логин')
-                .login-form__icon
-                    +icon('login','grey')
-            .login-form__input
-                input.login-form__pass(placeholder='Пароль')
-                .login-form__icon
-                    +icon('password','grey')
-            .login-form__checkbox
-                input.login-form__is-man(id='is-man__check' name='check' type='checkbox' value='man')
-                label.login-form__label(for='is-man__check') Я человек
-                    .checkbox
-                        +icon('checkbox','white')
-            .not-a-robot
-                p.not-a-robot__title Вы точно не робот?
-                .not-a-robot__radio
-                    input.not-a-robot__radio(id='not-a-robot_yes' name='robot' type='radio' value='yes')
-                    label.login-form__label(for='not-a-robot_yes') Да
-                        .radio
-                            +icon('radio','white')
-                    input.not-a-robot__radio(id='not-a-robot_no' name='robot' type='radio' value='no')
-                    label.login-form__label(for='not-a-robot_no') Не уверен
-                        .radio
-                            +icon('radio','white')
-            .login-form__button.button.button_left На главную
-            input.login-form__button.button.button_right(type='submit' value='Войти')
+        .login
+            .login__title.subtitle Авторизируйтесь
+            form.login-form
+                .login-form__input
+                    input.login-form__name(placeholder='Логин')
+                    .login-form__icon
+                        +icon('login','grey')
+                .login-form__input
+                    input.login-form__pass(placeholder='Пароль')
+                    .login-form__icon
+                        +icon('password','grey')
+                .login-form__checkbox
+                    input.login-form__is-man(id='is-man__check' name='check' type='checkbox' value='man')
+                    label.login-form__label(for='is-man__check') Я человек
+                        .checkbox
+                            +icon('checkbox','white')
+                .not-a-robot
+                    p.not-a-robot__title Вы точно не робот?
+                    .not-a-robot__radio
+                        input.not-a-robot__radio(id='not-a-robot_yes' name='robot' type='radio' value='yes')
+                        label.login-form__label(for='not-a-robot_yes') Да
+                            .radio
+                                +icon('radio','white')
+                        input.not-a-robot__radio(id='not-a-robot_no' name='robot' type='radio' value='no')
+                        label.login-form__label(for='not-a-robot_no') Не уверен
+                            .radio
+                                +icon('radio','white')
+
+                .login-form__button.button.button_left На главную
+                    label.flip__label(for='flipper')
+                input.login-form__button.button.button_right(type='submit' value='Войти')
     .intro__footer
         .copyright  &copy; beLemoth 2017

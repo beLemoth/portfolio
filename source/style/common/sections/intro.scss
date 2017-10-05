@@ -9,6 +9,11 @@
   position: relative;
   @extend .clearfix;
 
+  &__wrapper {
+    @include center('y');
+    width: 100%;
+  }
+
   &__footer {
     @include center('x');
     bottom: 40px;
