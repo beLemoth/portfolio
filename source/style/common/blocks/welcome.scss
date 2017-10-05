@@ -1,6 +1,7 @@
 .welcome {
   @include center();
-  width: 380px;
+  width: 95%;
+  max-width: 380px;
   height: 400px;
   background-color: rgba($welcome-bg,.6);
   border-radius: 10px;

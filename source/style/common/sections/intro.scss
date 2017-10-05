@@ -4,8 +4,10 @@
   background: url('../img/intro-bg.jpg') center no-repeat;
   background-size: cover;
   height: 100vh;
+  min-height: 600px;
   width: 100%;
   position: relative;
+  @extend .clearfix;
 
   &__footer {
     @include center('x');
