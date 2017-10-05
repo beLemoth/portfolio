@@ -1,14 +1,36 @@
 .carousel {
-  height: 750px;
   @extend .clearfix;
+
+  $carousel-height: 1010px;
+
+  height: $carousel-height;
+
+  @include phone {
+    height: 650px;
+  }
 
   &-preview {
     width: 50%;
     float: right;
-    height: 520px;
+    height: (520px/$carousel-height)*100%;
     background-color: $carousel-preview-bg;
     padding: 50px 20px;
     text-align: center;
+
+    @include tablet {
+      float: none;
+      width: 100%;
+      padding: 0;
+
+      &__image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    @include phone {
+      height: (300px/650px)*100%;
+    }
 
     &__image {
       width: auto;
@@ -24,24 +46,65 @@
     position: relative;
     background-color: $olive;
 
+    @include tablet {
+      float: none;
+      width: 100%;
+      height:(270px/$carousel-height)*100%;
+    }
+
+    @include phone {
+      height: (250px/650px)*100%;
+    }
+
+
     &__block {
       position: absolute;
       top: 240px;
       text-align: center;
       width: 100%;
+
+      @include tablet {
+        @include center('y');
+      }
     }
 
     &__title {
+
+      max-width: 50%;
+      margin: auto;
       line-height: 1.2;
       margin-bottom: 47px;
+
       &:after {
         top: 105px;
+      }
+
+      @include tablet {
+        min-width: 100%;
+        margin-bottom: 30px;
+        &:after {
+          top: 50px;
+        }
+      }
+
+      @include media (400px) {
+        &:after {
+          top: 95px;
+        }
       }
     }
 
     &__desc {
       @include font-style($medium-text,$green,16px,1.5,0);
       margin-bottom: 55px;
+
+      @include tablet {
+        margin-bottom: 30px;
+      }
+
+      @include media (400px) {
+        margin-bottom: 20px;
+      }
     }
     &__button {
       width: 200px;
@@ -67,9 +130,16 @@
   &-control {
     width:50%;
     float: right;
-    height: 230px;
+    height: (230px/$carousel-height)*100%;
     @extend .clearfix;
     text-align: center;
+
+    @include tablet {
+      float: none;
+      width: 100%;
+      height: (215px/$carousel-height)*100%;
+
+    }
 
     &__prev,
     &__next {

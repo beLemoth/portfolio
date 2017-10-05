@@ -6,6 +6,11 @@
   padding-top: 60px;
   padding-bottom: 185px;
 
+  @include phone {
+    padding-bottom: 350px;
+    height: auto;
+  }
+
   &__title-wrapper {
     margin-bottom: 50px;
   }
