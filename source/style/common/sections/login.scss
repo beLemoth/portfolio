@@ -1,8 +1,9 @@
 // LOGIN section
 
 .login {
-  width: 380px;
-  height: 425px;
+  width: 95%;
+  max-width: 380px;
+
   @include center();
   background-color: rgba($welcome-bg,.6);
   border-radius: 10px;
