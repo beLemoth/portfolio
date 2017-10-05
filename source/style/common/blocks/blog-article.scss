@@ -2,6 +2,11 @@
   max-width: 881px;
   padding: 65px 0;
   position: relative;
+
+  @include tablet {
+    max-width: 100%;
+  }
+
   &__title {
     @include font-style($title-text,$contacts-info-text,35px,1.2,0);
     margin-bottom: 20px;
@@ -15,6 +20,11 @@
       @include font-style($main-text,$contacts-info-text,16px,1.625,0);
       margin-bottom: 10px;
     }
+  }
+
+  &__inner {
+    overflow: scroll;
+
   }
 
   &:last-child {

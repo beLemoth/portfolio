@@ -11,6 +11,11 @@
     padding-left: 15px;
     position: relative;
 
+    @include phone {
+      max-width: 130px;
+      margin: auto;
+    }
+
 
     &:before {
       content: '';

@@ -6,6 +6,10 @@
   background: url('../img/intro-bg.jpg') center no-repeat;
   background-size: cover;
 
+  @include phone {
+    height: 600px;
+  }
+
   &__title {
     margin-bottom: 40px;
     color: $white;

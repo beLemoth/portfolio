@@ -7,16 +7,46 @@
   padding-bottom: 185px;
   @extend .clearfix;
 
+  @include tablet {
+    padding-bottom: 240px;
+  }
+
+  @include phone {
+    padding-bottom: 330px;
+  }
+
   &__aside {
     width: 25%;
     float: left;
     padding: 0 60px 0 15px;
+
+    @include desktop {
+      padding-right: 40px;
+    }
+    @include media(900px) {
+      padding-right: 15px;
+    }
+    @include tablet {
+      display: none;
+    }
   }
 
   &__content {
     width: 75%;
     float: left;
     padding: 0 15px 0 60px;
+
+    @include desktop {
+      padding-left: 40px;
+    }
+    @include media(900px) {
+      padding-right: 15px;
+    }
+    @include tablet {
+      padding: 0 30px;
+      width: 100%;
+    }
+
   }
 
 }
