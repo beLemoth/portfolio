@@ -11,13 +11,22 @@
   transition: transform .3s ease-out;
   transition-delay: .4s;
 
+  @include tablet {
+    padding-top: 20px;
+  }
+
   &__info {
     margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
   &__socials {
-    width: 146px;
-    margin: auto;
+    text-align: center;
+
   }
+
   &__navigation {
     position: absolute;
     bottom: 0;
