@@ -8,8 +8,9 @@
     }
   }
 
-
   &:checked ~ .fullscreen-menu {
+
+    transition-delay: 0s;
     visibility: visible;
 
     .burger {
@@ -19,17 +20,17 @@
           opacity: 0;
         }
         &:nth-child(2) {
-          transition: top .3s ease-out, transform .3s ease-out .3s;
+          transition: top $animate-burger-speed ease-out, transform $animate-burger-speed ease-out $animate-burger-speed;
           top: 50%;
           transform: rotateZ(45deg);
         }
         &:nth-child(3) {
-          transition: top .3s ease-out, transform .3s ease-out .3s;
+          transition: top $animate-burger-speed ease-out, transform $animate-burger-speed ease-out $animate-burger-speed;
           top: 50%;
           transform: rotateZ(-45deg);
         }
         &:nth-child(4) {
-          transition: top .3s ease-out, opacity 0s ease-in .3s;
+          transition: top $animate-burger-speed ease-out, opacity 0s ease-in $animate-burger-speed;
           top: 50%;
           opacity: 0;
         }

@@ -1,7 +1,8 @@
 //HEADER
 
 .header {
-  height: 600px;
+  height: 100vh;
+  min-height: 600px;
   position: relative;
   background: url('../img/intro-bg.jpg') center no-repeat;
   background-size: cover;

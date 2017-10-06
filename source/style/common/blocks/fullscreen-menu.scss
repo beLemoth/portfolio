@@ -8,6 +8,7 @@
   background-color: rgba($light-green,.87);
   text-align: center;
 
+  transition: visibility 0s ease-in $animate-burger-speed*2;
   visibility: hidden;
 
   &__button {
