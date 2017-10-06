@@ -10,7 +10,7 @@
 
 
   &:checked ~ .fullscreen-menu {
-    display: block;
+    visibility: visible;
 
     .burger {
       &__line {
@@ -19,14 +19,17 @@
           opacity: 0;
         }
         &:nth-child(2) {
+          transition: top .3s ease-out, transform .3s ease-out .3s;
           top: 50%;
           transform: rotateZ(45deg);
         }
         &:nth-child(3) {
+          transition: top .3s ease-out, transform .3s ease-out .3s;
           top: 50%;
           transform: rotateZ(-45deg);
         }
         &:nth-child(4) {
+          transition: top .3s ease-out, opacity 0s ease-in .3s;
           top: 50%;
           opacity: 0;
         }
