@@ -20,22 +20,23 @@ section.intro
             .login__title.subtitle Авторизируйтесь
             form.login-form
                 .login-form__input
-                    input.login-form__name(placeholder='Логин')
+                    input.login-form__name(placeholder='Логин' name='login' required)
+                    +message('Вы не ввели логин')
                     .login-form__icon
                         +icon('login','grey')
                 .login-form__input
-                    input.login-form__pass(placeholder='Пароль')
+                    input.login-form__pass(placeholder='Пароль' type='password' name='pass')
                     .login-form__icon
                         +icon('password','grey')
                 .login-form__checkbox
-                    input.login-form__is-man(id='is-man__check' name='check' type='checkbox' value='man')
+                    input.login-form__is-man(id='is-man__check' name='check' type='checkbox' value='man' required)
                     label.login-form__label(for='is-man__check') Я человек
                         .checkbox
                             +icon('checkbox','white')
                 .not-a-robot
                     p.not-a-robot__title Вы точно не робот?
                     .not-a-robot__radio
-                        input.not-a-robot__radio(id='not-a-robot_yes' name='robot' type='radio' value='yes')
+                        input.not-a-robot__radio(id='not-a-robot_yes' name='robot' type='radio' value='yes' required)
                         label.login-form__label(for='not-a-robot_yes') Да
                             .radio
                                 +icon('radio','white')

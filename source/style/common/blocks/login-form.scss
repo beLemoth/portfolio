@@ -14,6 +14,14 @@
     height: 45px;
     background-color: #f0efe9;
     border-radius: 50% 0 0 50%;
+    border-right: 1px solid #f0efe9;
+
+    transition: border-color .2s ease-in;
+
+    .icon {
+      transition: fill .5s ease-out;
+    }
+
   }
 
   &__name,
@@ -32,7 +40,41 @@
     &::placeholder {
       color: rgba($input-text,.5);
     }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:required:valid {
+      border: 1px solid $light-green;
+
+      & ~ .login-form__icon{
+        border-color: $light-green;
+        .icon {
+          fill: $light-green;
+        }
+      }
+    }
+    /*
+    &:required:invalid {
+      border: 1px solid $red;
+
+      & ~ .login-form__icon{
+        border-color: $red;
+        .icon {
+          fill: $red;
+        }
+      }
+
+      & ~ .invalid-message {
+        display: block;
+      }
+
+    }
+    */
+
   }
+
 
   &__label {
     color: $white;

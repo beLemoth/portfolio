@@ -57,3 +57,10 @@ mixin circle(skill,value)
             circle(class='skill__indicator skill__indicator_green' cx='60' cy='60' r='50' fill="none" stroke-dasharray =array+' '+offset stroke-width="20" stroke-opacity=value/100)
             circle(class="skill_front skill__front_white" cx='60' cy='60' r='40')
         .skill__name= skill
+
+// - invalid input message
+mixin message(text)
+    .invalid-message
+        .invalid-message__text= text
+            svg(viewbox='0 0 18 9' preserveAspectRatio="none" class="invalid-message__pointer")
+                polygon(points='0 9,9 0,18 9')
