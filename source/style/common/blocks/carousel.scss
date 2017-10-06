@@ -1,9 +1,11 @@
 .carousel {
   @extend .clearfix;
 
-  $carousel-height: 1010px;
+  height: 750px;
 
-  height: $carousel-height;
+  @include tablet {
+    height: 1010px;
+  }
 
   @include phone {
     height: 650px;
@@ -12,7 +14,7 @@
   &-preview {
     width: 50%;
     float: right;
-    height: (520px/$carousel-height)*100%;
+    height: (520px/750px)*100%;
     background-color: $carousel-preview-bg;
     padding: 50px 20px;
     text-align: center;
@@ -21,6 +23,7 @@
       float: none;
       width: 100%;
       padding: 0;
+      height: (520px/1010px)*100%;
 
       &__image {
         width: 100%;
@@ -49,7 +52,7 @@
     @include tablet {
       float: none;
       width: 100%;
-      height:(270px/$carousel-height)*100%;
+      height:(270px/1010px)*100%;
     }
 
     @include phone {
@@ -130,15 +133,14 @@
   &-control {
     width:50%;
     float: right;
-    height: (230px/$carousel-height)*100%;
+    height: (230px/750px)*100%;
     @extend .clearfix;
     text-align: center;
 
     @include tablet {
       float: none;
       width: 100%;
-      height: (215px/$carousel-height)*100%;
-
+      height: (215px/1010px)*100%;
     }
 
     &__prev,

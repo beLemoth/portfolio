@@ -11,8 +11,10 @@
     @extend .clearfix;
     background-color: rgba($grey, .85);
     min-height: 145px;
+    height: 150px;
 
     @include tablet {
+      height: auto;
       padding-top: 15px;
     }
 

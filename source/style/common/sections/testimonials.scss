@@ -6,19 +6,25 @@
   padding-top: 60px;
   padding-bottom: 185px;
 
+  @include tablet {
+    padding-bottom: 450px;
+  }
+
   @include phone {
     padding-bottom: 350px;
     height: auto;
   }
 
   &__title-wrapper {
+
+    width: 95%;
+    max-width: 420px;
+    margin: auto;
     margin-bottom: 50px;
   }
 
   &__title {
-    max-width: 420px;
     line-height: 1.0;
-    margin: auto;
 
     &:after {
       top: 160px;
