@@ -4,11 +4,19 @@
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 100500;
+  z-index: 1000;
   background-color: rgba($light-green,.87);
   text-align: center;
 
   display: none;
+
+  &__button {
+    position: absolute;
+    top: 28px;
+    right: 29px;
+    width: 42px;
+    height: 36px;
+  }
 }
 
 .main-nav {

@@ -1,5 +1,7 @@
 // HEADER section
 
+input.menu-hider(type='checkbox' id='menu-hider' name='menu-hider')
+
 header.header-blog
 
     .header__socials-wrapper
@@ -7,7 +9,11 @@ header.header-blog
 
     .header__menu
         .burger
-            +icon('hamburger','white',true)
+            label.menu-hider__label(for='menu-hider')
+            .burger
+                .burger__line
+                .burger__line
+                .burger__line
 
     .header-blog__intro
         .header__author-photo
