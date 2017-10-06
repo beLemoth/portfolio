@@ -2,7 +2,21 @@
 
 .developer {
   text-align: center;
+  position: relative;
   z-index: 100;
+
+  &__photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
   &__name {
     @include font-style($medium-text,$white,35px,1.2,0)
   }

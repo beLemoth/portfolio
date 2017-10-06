@@ -25,6 +25,13 @@
     left: $margin-side;
   }
 
+  &__author-photo {
+    @extend .developer__photo;
+    position: relative;
+    z-index: 1000;
+
+  }
+
   &__desc {
     @include center('y');
     width: 100%;
