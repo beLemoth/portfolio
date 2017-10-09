@@ -1,21 +1,35 @@
 .menu-hider {
   display: none;
 
-  &:checked ~ .header,
-  &:checked ~ .header-blog {
-    .burger {
-      display: none;
-    }
-  }
-
   &:checked ~ .fullscreen-menu {
 
-    transition-delay: 0s;
     visibility: visible;
+    transition: visibility 0s ease-in 0s;
+
+    .fullscreen-menu__bg {
+      &_left {
+        right: 50%;
+      }
+      &_right {
+        left: 50%;
+      }
+    }
+
+    .main-nav {
+      transition: visibility 0s ease-in .4s;
+      visibility: visible;
+    }
+
+  }
+
+  &:checked ~ .header__menu {
+
+    z-index: 100;
 
     .burger {
       &__line {
         &:nth-child(1) {
+          transition: top $animate-burger-speed ease-out, opacity $animate-burger-speed ease-in;
           top: 50%;
           opacity: 0;
         }
@@ -29,16 +43,9 @@
           top: 50%;
           transform: rotateZ(-45deg);
         }
-        &:nth-child(4) {
-          transition: top $animate-burger-speed ease-out, opacity 0s ease-in $animate-burger-speed;
-          top: 50%;
-          opacity: 0;
-        }
       }
     }
-
   }
-
   &__label {
     position: absolute;
     top: 0;

@@ -1,19 +1,20 @@
 // HEADER section
 
-input.menu-hider(type='checkbox' id='menu-hider' name='menu-hider')
-
 header.header
+
+    input.menu-hider(type='checkbox' id='menu-hider' name='menu-hider')
+
+    include ./menu
 
     .header__socials-wrapper
         +socials('header')
 
     .header__menu
+        label.menu-hider__label(for='menu-hider')
         .burger
-            label.menu-hider__label(for='menu-hider')
-            .burger
-                .burger__line
-                .burger__line
-                .burger__line
+            .burger__line
+            .burger__line
+            .burger__line
 
     .header__desc
         svg(class='header__image')

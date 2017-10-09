@@ -10,15 +10,6 @@
   $margin-vert: 32px;
   $margin-side: 29px;
 
-  &__menu {
-    position: absolute;
-    top: 28px;
-    right: $margin-side;
-    width: 42px;
-    height: 36px;
-    cursor: pointer;
-  }
-
   &__socials-wrapper {
     position: absolute;
     top: $margin-vert;
@@ -28,8 +19,16 @@
   &__author-photo {
     @extend .developer__photo;
     position: relative;
-    z-index: 1000;
+    z-index: 50;
+  }
 
+  &__menu  {
+    position: absolute;
+    top: 28px;
+    right: 29px;
+    width: 42px;
+    height: 36px;
+    z-index: 100;
   }
 
   &__desc {
@@ -60,7 +59,7 @@
     bottom: 70px;
     width: 30px;
     height: 17px;
-    z-index: 1000;
+    z-index: 50;
     cursor: pointer;
   }
 

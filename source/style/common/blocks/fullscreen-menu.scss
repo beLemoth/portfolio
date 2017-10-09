@@ -4,23 +4,44 @@
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 1000;
-  background-color: rgba($light-green,.87);
+  height: 100vh;
+  width: 100%;
   text-align: center;
+  overflow-Y: hidden;
 
-  transition: visibility 0s ease-in $animate-burger-speed*2;
+  transition: visibility 0s ease-in .4s;
+
   visibility: hidden;
+  z-index: 100;
 
-  &__button {
+  &__nav {
+    @extend .clearfix;
+  }
+
+  &__bg {
+    background-color: rgba($light-green, .87);
     position: absolute;
-    top: 28px;
-    right: 29px;
-    width: 42px;
-    height: 36px;
+    top: 0;
+    bottom: 0;
+
+    &_left {
+      transition: right .4s ease-out;
+      left: 0;
+      right: 100%;
+    }
+
+    &_right {
+      transition: left .4s ease-out;
+      right: 0;
+      left: 100%;
+    }
   }
 }
 
 .main-nav {
+  transition: visibility 0s ease-in 0s;
+  visibility: hidden;
+
   @include center();
   &__item {
     @include font-style($bold-text,$white,63px,2,0);
