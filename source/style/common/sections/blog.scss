@@ -2,7 +2,7 @@
 
 .blog {
 
-  position: relative;
+  //position: relative;
   background-color: $blog-bg;
   padding-bottom: 185px;
   @extend .clearfix;
@@ -27,7 +27,40 @@
       padding-right: 15px;
     }
     @include tablet {
+      float: none;
       display: none;
+    }
+    @include phone {
+      display: block;
+      position: fixed;
+      right: 10%;
+      top: 0;
+      bottom: 0;
+      max-width: 285px;
+      width: 90%;
+      background-color: $light-green;
+      z-index: 1000;
+      box-shadow: 3px 0px 5px 0px rgba(black,0.2);
+
+      &:after,
+      .blog__aside-label {
+        content: '';
+        width: 60px;
+        height: 60px;
+        background-color: $light-green;
+        position: fixed;
+        border-radius: 50%;
+        left: 80%;
+        top: 50%;
+        margin-top: -30px;
+
+      }
+
+      .blog__aside-label {
+        box-shadow: 3px 0px 5px 0px rgba(black,0.2);
+        z-index: 0;
+      }
+
     }
   }
 

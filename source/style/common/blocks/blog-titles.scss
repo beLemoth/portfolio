@@ -4,6 +4,7 @@
   margin-right: 0;
   max-width: 280px;
 
+
   &__item {
     text-align: right;
     @include font-style($main-text,$contacts-info-text,16px,1.6,0);
@@ -13,10 +14,18 @@
     position: relative;
     cursor: pointer;
 
+    @include phone {
+      color: rgba($white,.7);
+      padding-right: 0;
+    }
+
     &.active {
       color: $green;
       font-family: $bold-text;
 
+      @include phone {
+        color: $white;
+      }
 
       &:after {
         content: '';
@@ -25,6 +34,10 @@
         background-color: $green;
         @include center('y');
         right: 0;
+
+        @include phone {
+          display: none;
+        }
 
       }
     }
