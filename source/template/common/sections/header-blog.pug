@@ -1,8 +1,10 @@
 // HEADER section
 
-input.menu-hider(type='checkbox' id='menu-hider' name='menu-hider')
-
 header.header-blog
+
+    input.menu-hider(type='checkbox' id='menu-hider' name='menu-hider')
+
+    include ./menu
 
     .header__socials-wrapper
         +socials('header')

@@ -8,8 +8,8 @@
   margin: auto;
   position: relative;
 
-  transition: transform .4s ease-out;
-  transition-delay: .4s;
+  transition: transform $animate-auth-flip linear;
+  transition-delay: $animate-auth-flip;
 
   @include tablet {
     padding-top: 20px;

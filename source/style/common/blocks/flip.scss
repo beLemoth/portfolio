@@ -12,12 +12,11 @@
   &:checked ~ .intro__wrapper {
     .welcome {
       transform: rotateY(-90deg);
-      //transition: transform .5s ease-out;
       transition-delay: 0s;
     }
     .login {
       transform: rotateY(0);
-      transition-delay: .4s;
+      transition-delay: $animate-auth-flip;
     }
   }
 

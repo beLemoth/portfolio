@@ -15,7 +15,7 @@
   padding-bottom: 65px;
 
   transform: rotateY(90deg);
-  transition: transform .4s ease-out;
+  transition: transform $animate-auth-flip linear;
 
   &__title {
     line-height: 1.8;
