@@ -1,15 +1,7 @@
 .carousel {
   @extend .clearfix;
 
-  height: 750px;
-
-  @include tablet {
-    height: 1010px;
-  }
-
-  @include phone {
-    height: 650px;
-  }
+  height: 100vh;
 
   &-preview {
     width: 50%;
@@ -61,8 +53,7 @@
 
 
     &__block {
-      position: absolute;
-      top: 240px;
+      @include center('y');
       text-align: center;
       width: 100%;
 

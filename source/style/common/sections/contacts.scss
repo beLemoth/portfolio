@@ -2,21 +2,27 @@
   position: relative;
 
   &__info-block {
-    @include center('x');
-    top: 328px;
+    @include center();
+    margin-top: -92.5px;
+
 
     @include tablet {
-      top: 170px;
+      margin-top: -112px;
     }
 
     @include phone {
+      margin-top: 0;
       top: 0;
+      left: 0;
+      transform: none;
     }
   }
 
   &__map {
     overflow: hidden;
+    height: 100vh;
     max-height: 1112px;
+    min-height: 600px;
 
     @include tablet {
       max-height: 900px;

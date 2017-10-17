@@ -11,9 +11,11 @@
     border-radius: 50%;
     overflow: hidden;
     margin: auto;
+    position: relative;
 
     img {
-      width: 100%;
+      @include center();
+      height: 100%;
     }
   }
 
