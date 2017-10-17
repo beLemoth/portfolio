@@ -116,7 +116,7 @@ function initMap () {
             position: coordinates,
             map: map,
             icon: icon
-        })
+        });
 
     map.setOptions({styles: styles});
 }
