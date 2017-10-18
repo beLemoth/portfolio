@@ -1,26 +1,16 @@
+
 (function() {
   'use strict';
 
-  function scrollDown() {
-      var height = window.innerHeight;
+  var targetToScrollDown = document.querySelector('#scroll-down'),
+      targetToScrollUp = document.querySelector('#scroll-up');
 
-      (function move() {
-          var pageOffset = window.pageYOffset;
-          window.scrollBy(0, 60);
-          if (window.pageYOffset < height) {
-              requestAnimationFrame(move);
-          }
-      })();
+  if (targetToScrollDown) {
+      targetToScrollDown.addEventListener('click',function(){scroll(window.innerHeight)});
   }
-
-  function scrollUp() {
-      window.scrollTo(0,0);
+  if (targetToScrollUp) {
+      targetToScrollUp.addEventListener('click',function(){scroll(0,true,0,15)});
   }
-
-
-
-  document.querySelector('#scroll-down').addEventListener('click',scrollDown);
-  document.querySelector('#scroll-up').addEventListener('click',scrollUp);
 
 
 })();
