@@ -6,22 +6,22 @@ section.works
 
     .carousel
         .carousel-preview
-            img.carousel-preview__image(src="./assets/img/work-1.png" alt="Карусель")
         .carousel-link
             .carousel-link__block
-                .carousel-link__title.subtitle Сайт школы онлайн образования
-                .carousel-link__desc HTML, CSS, JAVASCRIPT
+                .carousel-link__title.subtitle
+                .carousel-link__desc
                 .carousel-link__button.button Посмотреть сайт
+                    a.carousel-link__link(href='#' target="_blank")
                     .carousel-link__icon
                         +icon('link','white')
         .carousel-control
             .carousel-control__prev
-                img.carousel-control__image(src="./assets/img/work-4.png")
+                img.carousel-control__image(src="/")
                 .carousel-control__button
                     .carousel-control__icon
                         +icon('portf_arrow_down','white')
             .carousel-control__next
-                img.carousel-control__image(src="./assets/img/work-2.png")
+                img.carousel-control__image(src="/")
                 .carousel-control__button
                     .carousel-control__icon
                         +icon('portf_arrow_up','white')

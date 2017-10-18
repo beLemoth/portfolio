@@ -12,9 +12,4 @@
       targetToScrollUp.addEventListener('click',function(){scroll(0,true,0,20)});
   }
 
-
 })();
-
-
-
-

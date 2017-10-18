@@ -10,6 +10,9 @@
     background-color: $carousel-preview-bg;
     padding: 50px 20px;
     text-align: center;
+    overflow: hidden;
+
+    @extend .clearfix;
 
     @include tablet {
       float: none;
@@ -28,9 +31,16 @@
     }
 
     &__image {
-      width: auto;
       height: 100%;
-      display: inline-block;
+      float: left;
+      width: 100%;
+      margin-bottom: 50px;
+
+      img {
+        width: auto;
+        height: 100%;
+        display: inline-block;
+      }
     }
   }
 
@@ -117,6 +127,15 @@
       height: 20px;
       left: 20px;
       top: 5px;
+    }
+
+    &__link {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
     }
 
   }
