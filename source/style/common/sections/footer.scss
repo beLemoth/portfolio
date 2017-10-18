@@ -151,6 +151,12 @@
       height: 100%;
       width: auto;
     }
+
+    @include phone {
+      img {
+        height: 100px;
+      }
+    }
   }
 
   &__testimonial {

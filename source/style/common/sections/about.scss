@@ -1,8 +1,12 @@
 .about {
   @extend .clearfix;
-  min-height: 855px;
+  min-height: 100vh;
   position: relative;
   background-color: $about-right-bg;
+
+  @include tablet {
+    height: auto;
+  }
 
   @include tablet {
     .triangle {
@@ -63,7 +67,7 @@
     @extend .clearfix;
     padding: 20px 0;
     padding-right: 18px;
-    min-height: 860px;
+    min-height: 100vh;
 
     @include desktop {
       min-height: 0;
