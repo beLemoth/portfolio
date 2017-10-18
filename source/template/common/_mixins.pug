@@ -1,4 +1,4 @@
-// social icons list
+- // social icons list
 mixin socials(section)
     ul(class= (section)?('socials '+section+'__socials'):('socials'))
         each ref, item in socials
@@ -7,7 +7,7 @@ mixin socials(section)
                 a(class="socials__link socials__link_" + item href= ref target="_blank")
                     +icon(item,color,true)
 
-// navigation menu list
+- // navigation menu list
 mixin nav(sectionName, sectionToPass)
     ul(class= sectionName + '-nav nav')
         each ref, name in navMenu
@@ -15,7 +15,7 @@ mixin nav(sectionName, sectionToPass)
                 li(class= sectionName + '-nav__item nav__item')
                     a(class= sectionName + '-nav__link nav__link' href= ref)= name
 
-// developer info block
+- // developer info block
 mixin developer(section)
     div(class= (section)?('developer '+section+'__developer'):('developer'))
         div(class= (section)?('developer__photo '+section+'__developer-photo'):('developer__photo'))
@@ -23,12 +23,12 @@ mixin developer(section)
         div(class= (section)?('developer__name '+section+'__developer-name'):('developer__name'))= developer.name
         div(class= (section)?('developer__description '+section+'__developer-description'):('developer__description'))= developer.description
 
-// icon svg insert
+- // icon svg insert
 mixin icon(name,mod,isLink)
     svg(class="icon icon_" + name + " icon_" + mod+((isLink)?' icon__link':''))
         use(xlink:href="assets/img/sprite.svg#" + name)
 
-// triangles insert (left||right, size, color)
+- // triangles insert (left||right, size, color)
 mixin triangle(leftColor,rightColor)
     .triangles
         svg(viewbox='0 0 900 100' preserveAspectRatio="none" class="triangle triangle_" + leftColor)
@@ -36,7 +36,7 @@ mixin triangle(leftColor,rightColor)
         svg(viewbox='0 0 900 100' preserveAspectRatio="none" class="triangle triangle_" + rightColor)
             polygon(points='0 100,900 0,900 100')
 
-// - title insert
+- // - title insert
 mixin title(section, title, isMain)
     div(class='title-wrapper '+section+'__title-wrapper')
         svg(class='title-bg title-bg_'+section)
@@ -46,7 +46,7 @@ mixin title(section, title, isMain)
         else
             h2(class='title '+section+'__title')= title
 
-// - skill circle
+- // - skill circle
 mixin circle(skill,value)
     div(class="skill")
         -
@@ -58,7 +58,7 @@ mixin circle(skill,value)
             circle(class="skill_front skill__front_white" cx='60' cy='60' r='40')
         .skill__name= skill
 
-// - invalid input message
+- // - invalid input message
 mixin message(text)
     .invalid-message
         .invalid-message__text= text
