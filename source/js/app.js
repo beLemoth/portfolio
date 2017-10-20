@@ -2,6 +2,8 @@
 (function() {
   'use strict';
 
+  // use scroll.js file
+
   var targetToScrollDown = document.querySelector('#scroll-down'),
       targetToScrollUp = document.querySelector('#scroll-up');
 
