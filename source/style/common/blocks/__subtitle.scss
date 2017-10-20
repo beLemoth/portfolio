@@ -8,7 +8,7 @@
   &:after {
     content: '';
     @include center('x');
-    top: 70px;
+    bottom: -20px;
     height: 3px;
     width: 90px;
     background-color: $light-grey;

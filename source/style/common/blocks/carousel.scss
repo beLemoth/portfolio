@@ -74,21 +74,14 @@
 
     &__title {
 
-      max-width: 50%;
+      max-width: 400px;
       margin: auto;
       line-height: 1.2;
       margin-bottom: 47px;
 
-      &:after {
-        top: 105px;
-      }
-
       @include tablet {
         min-width: 100%;
         margin-bottom: 30px;
-        &:after {
-          top: 50px;
-        }
       }
 
       @include media (400px) {
@@ -153,6 +146,23 @@
       height: (215px/1010px)*100%;
     }
 
+    &__button {
+      overflow: hidden;
+
+    }
+
+    &__image {
+      height: 100%;
+      float: left;
+      width: 100%;
+      display: inline-block;
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+
     &__prev,
     &__next {
       float: left;
@@ -160,6 +170,7 @@
       height: 100%;
       position: relative;
       cursor: pointer;
+      overflow: hidden;
     }
 
     &__prev {
@@ -167,12 +178,6 @@
     }
     &__next {
       background-color: $carousel-up-bg;
-    }
-
-    &__image {
-      width: auto;
-      height: 100%;
-      display: inline-block;
     }
 
     &__button {
