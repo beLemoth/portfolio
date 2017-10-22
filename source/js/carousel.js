@@ -51,40 +51,54 @@ if (carousel) (function(){
         return block;
     }
 
-    function carouselInit(speed) {
-        speed = speed || 1000;
-        fadeIn(preview.appendChild(createImage(activeItem)));
-        pushTop(prevButton.appendChild(createImage(activeItem-1,'carousel-control')),speed);
-        pushDown(nextButton.appendChild(createImage(activeItem+1,'carousel-control')),speed);
+    function carouselInit() {
+        preview.appendChild(createImage(activeItem));
+        prevButton.appendChild(createImage(activeItem-1,'carousel-control'));
+        nextButton.appendChild(createImage(activeItem+1,'carousel-control'));
 
         itemTitle.innerText = carouselItems[activeItem].title;
         itemDesc.innerText = carouselItems[activeItem].desc;
         itemLink.href = carouselItems[activeItem].link;
     }
 
-    function carouselReload(speed) {
+    function carouselChange(speed) {
         speed = speed || 1000;
-        fadeOut(preview.querySelector(".carousel-preview__image",speed));
-        moveDown(prevButton.querySelector(".carousel-control__image",speed));
-        moveTop(nextButton.querySelector(".carousel-control__image",speed));
+        var previewImage = preview.querySelector(".carousel-preview__image"),
+            prevButtonImage = prevButton.querySelector(".carousel-control__image"),
+            nextButtonImage = nextButton.querySelector(".carousel-control__image");
+
+        fadeOut(previewImage,speed);
+        moveDown(prevButtonImage,speed);
+        moveTop(nextButtonImage,speed);
         var timer = setTimeout(function() {
-            carouselInit(speed*2);
-        }, speed);
+            previewImage.querySelector('img').src = carouselItems[activeItem].image;
+            prevButtonImage.remove();
+            nextButtonImage.remove();
+            prevButton.appendChild(createImage(activeItem-1,'carousel-control'));
+            nextButton.appendChild(createImage(activeItem+1,'carousel-control'));
+            pushTop(nextButtonImage,speed,speed);
+            pushDown(prevButton.querySelector(".carousel-control__image"),speed,speed);
+        },speed);
+
+        fadeIn(previewImage,speed,speed);
+
+
+
     }
 
     function nextItem() {
         activeItem = (++activeItem === length) ? 0 : activeItem;
         console.log(activeItem);
-        carouselReload(300);
+        carouselChange();
     }
 
     function prevItem() {
         activeItem = (activeItem) ? --activeItem : length-1;
         console.log(activeItem);
-        carouselReload(300);
+        carouselChange();
     }
 
-    carouselInit(500);
+    carouselInit();
     prevButton.addEventListener('click',function(){prevItem()});
     nextButton.addEventListener('click',function(){nextItem()});
 

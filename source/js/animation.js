@@ -1,72 +1,98 @@
-function fadeOut(element,speed) {
-    element.style.opacity = element.style.opacity || 1;
+
+function fadeOut(element,speed,delay,easing) {
     speed = (speed > 0) ? speed : 1000 || 1000;
-    (function opacityDown() {
-        element.style.opacity -= (60/speed);
-        if (element.style.opacity > 0) {requestAnimationFrame(opacityDown);}
-            else element.remove();
-    })();
+    delay = delay || 0;
+    easing = easing || 'ease-out';
+    element.animate(
+        [
+            {opacity:1},
+            {opacity:0}
+        ],
+        {
+            delay: delay,
+            duration: speed
+        }
+    );
 }
 
-function fadeIn(element,speed) {
-    element.style.opacity = 0;
-    var opacity = 0;
+function fadeIn(element,speed,delay,easing) {
     speed = (speed > 0) ? speed : 1000 || 1000;
-    (function opacityUp() {
-        opacity += (60/speed);
-        element.style.opacity = opacity ;
-
-        if (opacity < 1) {requestAnimationFrame(opacityUp);}
-    })();
+    delay = delay || 0;
+    easing = easing || 'ease-out';
+    element.animate(
+        [
+            {opacity:0},
+            {opacity:1}
+        ],
+        {
+            delay: delay,
+            duration: speed
+        }
+    );
 }
 
-function moveTop(element,speed) {
-    element.style.bottom = 0;
-    element.style.top = 'auto';
-    var bottom = 0;
+function moveTop(element,speed,delay,easing) {
     speed = (speed > 0) ? speed : 1000 || 1000;
-    (function move() {
-        bottom += (60/speed)*100;
-        element.style.bottom = bottom + '%';
-        console.log(bottom + 'b');
-        if (bottom < 100) {requestAnimationFrame(move);}
-            else element.remove();
-    })();
+    delay = delay || 0;
+    easing = easing || 'ease-out';
+    element.animate(
+        [
+            {bottom: 0+'%'},
+            {bottom: 100+'%'}
+        ],
+        {
+            delay: delay,
+            duration: speed
+        }
+    );
 }
 
-function pushTop(element,speed) {
-    element.style.bottom = 0;
-    console.log(element.style.bottom);
-    var bottom = 100;
+function moveDown(element,speed,delay,easing) {
     speed = (speed > 0) ? speed : 1000 || 1000;
-    (function move() {
-        bottom -= (60/speed)*100;
-        element.style.bottom = bottom + '%';
-        if (bottom > 0) {requestAnimationFrame(move);}
-    })();
+    delay = delay || 0;
+    easing = easing || 'ease-out';
+    element.animate(
+        [
+            {top: 0+'%'},
+            {top: 100+'%'}
+        ],
+        {
+            delay: delay,
+            duration: speed
+        }
+    );
 }
 
-function moveDown(element,speed) {
-    element.style.top = 0;
-    element.style.top = 'auto';
-    var top = 0;
+function pushTop(element,speed,delay,easing) {
+    console.log(element, element.style.top);
     speed = (speed > 0) ? speed : 1000 || 1000;
-    (function move() {
-        top += (60/speed)*100;
-        element.style.top = top + '%';
-        if (top < 100) {requestAnimationFrame(move);}
-            else element.remove();
-    })();
+    delay = delay || 0;
+    easing = easing || 'ease-out';
+    element.animate(
+        [
+            {bottom: 100+'%'},
+            {bottom: 0+'%'}
+        ],
+        {
+            delay: delay,
+            duration: speed
+        }
+    );
 }
 
-function pushDown(element,speed) {
-    element.style.top = 0;
-    var top = 100;
+
+function pushDown(element,speed,delay,easing) {
     speed = (speed > 0) ? speed : 1000 || 1000;
-    (function move() {
-        top -= (60/speed)*100;
-        element.style.top = top + '%';
-        console.log(top);
-        if (top > 0) {requestAnimationFrame(move);}
-    })();
+    delay = delay || 0;
+    easing = easing || 'ease-out';
+    element.animate(
+        [
+            {top: 100+'%'},
+            {top: 0+'%'}
+        ],
+        {
+            delay: delay,
+            duration: speed
+        }
+    );
 }
