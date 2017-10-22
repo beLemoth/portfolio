@@ -37,11 +37,15 @@ if (carousel) (function(){
         activeItem = 0,
         length = carouselItems.length;
 
+    function item(number) {
+        return number = (number<0) ? (length+number) :
+            (number === length) ? 0 : number;
+    }
+
 
     function createImage(item,className) {
         className = className || "carousel-preview";
-        item = (item<0) ? (length+item) :
-            (item === length) ? 0 : item || 0;
+
         var block = document.createElement('div'),
             img = document.createElement('img');
 
@@ -53,8 +57,8 @@ if (carousel) (function(){
 
     function carouselInit() {
         preview.appendChild(createImage(activeItem));
-        prevButton.appendChild(createImage(activeItem-1,'carousel-control'));
-        nextButton.appendChild(createImage(activeItem+1,'carousel-control'));
+        prevButton.appendChild(createImage(item(activeItem-1),'carousel-control'));
+        nextButton.appendChild(createImage(item(activeItem+1),'carousel-control'));
 
         itemTitle.innerText = carouselItems[activeItem].title;
         itemDesc.innerText = carouselItems[activeItem].desc;
@@ -68,34 +72,33 @@ if (carousel) (function(){
             nextButtonImage = nextButton.querySelector(".carousel-control__image");
 
         fadeOut(previewImage,speed);
-        moveDown(prevButtonImage,speed);
-        moveTop(nextButtonImage,speed);
+        fadeOut(prevButtonImage,speed);
+        fadeOut(nextButtonImage,speed);
         var timer = setTimeout(function() {
             previewImage.querySelector('img').src = carouselItems[activeItem].image;
-            prevButtonImage.remove();
-            nextButtonImage.remove();
-            prevButton.appendChild(createImage(activeItem-1,'carousel-control'));
-            nextButton.appendChild(createImage(activeItem+1,'carousel-control'));
-            pushTop(nextButtonImage,speed,speed);
-            pushDown(prevButton.querySelector(".carousel-control__image"),speed,speed);
+            prevButtonImage.querySelector('img').src = carouselItems[item(activeItem-1)].image;
+            nextButtonImage.querySelector('img').src = carouselItems[item(activeItem+1)].image;
+
+            itemTitle.innerText = carouselItems[activeItem].title;
+            itemDesc.innerText = carouselItems[activeItem].desc;
+            itemLink.href = carouselItems[activeItem].link;
+
         },speed);
 
         fadeIn(previewImage,speed,speed);
-
-
+        fadeIn(prevButtonImage,speed,speed);
+        fadeIn(nextButtonImage,speed,speed);
 
     }
 
     function nextItem() {
         activeItem = (++activeItem === length) ? 0 : activeItem;
-        console.log(activeItem);
-        carouselChange();
+        carouselChange(300);
     }
 
     function prevItem() {
         activeItem = (activeItem) ? --activeItem : length-1;
-        console.log(activeItem);
-        carouselChange();
+        carouselChange(300);
     }
 
     carouselInit();
