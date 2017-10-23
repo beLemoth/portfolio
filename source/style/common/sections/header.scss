@@ -4,8 +4,10 @@
   height: 100vh;
   min-height: 600px;
   position: relative;
-  background: url('../img/intro-bg.jpg') center no-repeat;
+  background: url('../img/intro-bg.jpg') no-repeat;
   background-size: cover;
+  background-position-X: center;
+  background-position-Y: 0;
 
   $margin-vert: 32px;
   $margin-side: 29px;

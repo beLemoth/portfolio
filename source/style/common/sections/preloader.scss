@@ -1,0 +1,59 @@
+.preload {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100500;
+  background: url('../img/preloader-bg.jpg') center no-repeat $light-green;
+
+  &__progress {
+    width: 100px;
+    height: 100px;
+    padding-top: 35px;
+    @include center();
+
+    .icon_preload {
+      fill: none;
+      stroke: $white;
+      stroke-width: 3px;
+      stroke-dasharray: 100px;
+      stroke-dashoffset: 200px;
+
+      &:nth-child(2) {
+        animation: loading 1.6s ease-in infinite;
+      }
+
+      &:nth-child(3) {
+        animation: loading 1.6s ease-in infinite .4s;
+      }
+      &:nth-child(4) {
+        animation: loading 1.6s ease-in infinite .8s;
+      }
+
+
+    }
+  }
+
+  &__text {
+    @include font-style($title-text,$white,22px,1.6,0);
+    @include center('x');
+    top: 0;
+  }
+
+}
+
+@keyframes loading {
+  0% {
+    stroke-dasharray: 100px;
+    stroke-dashoffset: 300px;
+  }
+  50% {
+    stroke-dasharray: 50px;
+    stroke-dashoffset: 100px;
+  }
+  100% {
+    stroke-dasharray: 100px;
+    stroke-dashoffset: 100px;
+  }
+}

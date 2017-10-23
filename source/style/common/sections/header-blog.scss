@@ -3,7 +3,7 @@
 .header-blog {
   height: 435px;
   position: relative;
-  background: url('../img/intro-bg.jpg') center no-repeat;
+  background: url('../img/intro-bg.jpg') center -300px no-repeat;
   background-size: cover;
 
   @include phone {

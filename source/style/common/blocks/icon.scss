@@ -29,6 +29,10 @@
     fill: $light-green;
   }
 
+  &_none {
+    fill: none;
+  }
+
   &_login,
   &_password {
     width: 17px;
@@ -51,6 +55,10 @@
     height: 8px;
     @include center('y');
     left: 6px;
+  }
+
+  &_preload {
+    height: 15px;
   }
 
 }
