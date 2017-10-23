@@ -27,12 +27,4 @@
       targetToScrollUp.addEventListener('click',function(){scroll(0,true,0,20)});
   }
 
-  //use carousel.js file
-
-  if (carousel) {
-      carouselInit();
-      prevButton.addEventListener('click',function(){console.log('prev');prevItem()});
-      nextButton.addEventListener('click',function(){console.log('next');nextItem()});
-  }
-
 })();

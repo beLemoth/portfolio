@@ -87,11 +87,12 @@ function pushDown(element,speed,delay,easing) {
     easing = easing || 'ease-out';
     element.animate(
         [
-            {top: 100+'%'},
-            {top: 0+'%'}
+            {top: 100 + '%'},
+            {top: 0 + '%'}
         ],
         {
             delay: delay,
             duration: speed
         }
-    );
+    )
+}
