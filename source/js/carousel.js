@@ -36,7 +36,9 @@ if (carousel) (function(){
         itemDesc = carousel.querySelector('.carousel-link__desc'),
         itemLink = carousel.querySelector('.carousel-link__link'),
         activeItem = 0,
-        length = carouselItems.length;
+        length = carouselItems.length,
+        inProcess = false,
+        animationSpeed = 400;
 
     function item(number) {
         return number = (number<0) ? (length+number) :
@@ -72,6 +74,8 @@ if (carousel) (function(){
             prevButtonImage = prevButton.querySelector(".carousel-control__image"),
             nextButtonImage = nextButton.querySelector(".carousel-control__image");
 
+        inProcess = true;
+
         fadeOut(previewImage,speed);
         fadeOut(prevButtonImage,speed);
         fadeOut(nextButtonImage,speed);
@@ -90,16 +94,24 @@ if (carousel) (function(){
         fadeIn(prevButtonImage,speed,speed);
         fadeIn(nextButtonImage,speed,speed);
 
+        var endTimer = setTimeout(function(){
+            inProcess = false;
+        },speed*2);
+
     }
 
     function nextItem() {
-        activeItem = (++activeItem === length) ? 0 : activeItem;
-        carouselChange(300);
+        if(!inProcess) {
+            activeItem = (++activeItem === length) ? 0 : activeItem;
+            carouselChange(animationSpeed);
+        }
     }
 
     function prevItem() {
-        activeItem = (activeItem) ? --activeItem : length-1;
-        carouselChange(300);
+        if(!inProcess) {
+            activeItem = (activeItem) ? --activeItem : length-1;
+            carouselChange(animationSpeed);
+        }
     }
 
     carouselInit();
