@@ -5,8 +5,8 @@ function fadeOut(element,speed,delay,easing) {
     easing = easing || 'ease-out';
     element.animate(
         [
-            {opacity:1},
-            {opacity:0}
+            {opacity:1, display: ''},
+            {opacity:0, display: 'none'}
         ],
         {
             delay: delay,

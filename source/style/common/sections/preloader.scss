@@ -36,7 +36,8 @@
   }
 
   &__text {
-    @include font-style($title-text,$white,22px,1.6,0);
+    font-size: 24px;
+    color: $white;
     @include center('x');
     top: 0;
   }
