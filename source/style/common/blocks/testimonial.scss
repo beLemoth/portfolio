@@ -1,13 +1,11 @@
 .testimonial {
   width: 50%;
-  float: left;
   padding: 15px;
   position: relative;
   margin-bottom: 50px;
 
   @include phone {
-    float: none;
-    width: auto;
+    width: 100%;
     max-width: 400px;
     margin: auto;
   }

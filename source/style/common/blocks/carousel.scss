@@ -12,8 +12,6 @@
     text-align: center;
     overflow: hidden;
 
-    @extend .clearfix;
-
     @include tablet {
       float: none;
       width: 100%;
@@ -40,6 +38,11 @@
         width: auto;
         height: 100%;
         display: inline-block;
+
+        @include phone {
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }
@@ -48,8 +51,12 @@
     width: 50%;
     float: left;
     height: 100%;
-    position: relative;
     background-color: $olive;
+
+    min-height: 200px;
+
+    display: flex;
+    align-items: center;
 
     @include tablet {
       float: none;
@@ -63,13 +70,8 @@
 
 
     &__block {
-      @include center('y');
       text-align: center;
       width: 100%;
-
-      @include tablet {
-        @include center('y');
-      }
     }
 
     &__title {
@@ -112,6 +114,8 @@
       padding-left: 50px;
       position: relative;
       text-align: left;
+
+      margin: auto;
     }
 
     &__icon {
@@ -137,8 +141,9 @@
     width:50%;
     float: right;
     height: (230px/750px)*100%;
-    @extend .clearfix;
     text-align: center;
+
+    display: flex;
 
     @include tablet {
       float: none;
@@ -146,28 +151,22 @@
       height: (215px/1010px)*100%;
     }
 
-    &__button {
-      overflow: hidden;
-      position: relative;
-      z-index: 50;
-    }
-
     &__image {
       height: 100%;
-      float: left;
-      width: 100%;
+      width: 50%;
       display: inline-block;
-      position: relative;
 
       img {
         width: auto;
         height: 100%;
+
+        max-width: 100%;
+
       }
     }
 
     &__prev,
     &__next {
-      float: left;
       width: 50%;
       height: 100%;
       position: relative;
@@ -183,6 +182,13 @@
     }
 
     &__button {
+      overflow: hidden;
+      z-index: 50;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       position: absolute;
       left: 0;
       right: 0;
@@ -192,7 +198,6 @@
     }
 
     &__icon {
-      @include center();
       width: 40px;
       height: 26px;
     }

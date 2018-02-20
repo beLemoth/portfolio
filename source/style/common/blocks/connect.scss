@@ -38,10 +38,7 @@
 
   &__send,
   &__clear {
-    position: absolute;
-    bottom: 0;
     height: 45px;
-    width: 50%;
     @include font-style($medium-text,$white,16px,1.5,0);
   }
 

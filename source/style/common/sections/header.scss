@@ -7,6 +7,11 @@
   background: url('../img/intro-bg.jpg') center no-repeat;
   background-size: cover;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
   $margin-vert: 32px;
   $margin-side: 29px;
 
@@ -24,17 +29,17 @@
 
   &__menu  {
     position: absolute;
-    top: 28px;
-    right: 29px;
+    top: $margin-vert;
+    right: $margin-side;
     width: 42px;
     height: 36px;
     z-index: 100;
   }
 
   &__desc {
-    @include center('y');
     width: 100%;
-    min-height: 295px;
+    height: 295px;
+    position: relative;
   }
 
   &__developer-photo {
@@ -50,7 +55,7 @@
   &__image {
     width: 100%;
     height: 100%;
-    @include center('y');
+    position: absolute;
     fill: rgba($white,.12);
   }
 

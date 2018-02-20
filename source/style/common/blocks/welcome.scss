@@ -30,8 +30,7 @@
   &__navigation {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
   }
 
   &__developer-description {
@@ -39,26 +38,28 @@
   }
 
   &-nav {
-    @extend .clearfix;
+
+    display: flex;
 
     &__item {
       @extend .button;
       @extend .button_center;
 
-      width: (127/380)*100%;
+      flex: .85 .85;
 
       &:first-child {
         @extend .button_left;
-        width: (155/380)*100%;
+
+        flex: 1 1;
       }
 
       &:last-child {
         @extend .button_right;
-        width: (98/380)*100%;
+
+        flex: .65 .65;
       }
 
       height: 45px;
-      float: left;
       text-align: center;
       line-height: 45px;
 

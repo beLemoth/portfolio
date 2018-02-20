@@ -34,7 +34,10 @@
   &__content {
     max-width: 820px;
     margin: auto;
-    @extend .clearfix;
+
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
   }
 
   &__up-arrow {
