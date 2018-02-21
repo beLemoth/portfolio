@@ -5,11 +5,14 @@
   var intro = document.querySelector('section.intro');
   if(intro){
       var checkbox = intro.querySelector('input.flip'),
-          wrapper = document.querySelector('.intro__wrapper');
+          wrapper = document.querySelector('.intro__wrapper'),
+          login = document.querySelector('.login');
 
-      intro.addEventListener('click',function () {
+      intro.addEventListener('click',function (event) {
+
+          login.style.display = 'block';
+
           if(event.target === intro || event.target === wrapper ) {
-              console.log(checkbox);
               checkbox.checked = false;
           }
       });

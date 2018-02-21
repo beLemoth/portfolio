@@ -6,13 +6,16 @@
 
   margin: auto;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
   margin-left: -190px;
+  margin-top: -190px;
   background-color: rgba($welcome-bg,.6);
   border-radius: 10px;
   padding: 20px;
   padding-bottom: 65px;
+
+  display: none;
 
   transform: rotateY(90deg);
   transition: transform $animate-auth-flip linear;
