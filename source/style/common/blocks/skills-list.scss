@@ -1,29 +1,41 @@
 .skills-list {
   width: 100%;
-  @extend .clearfix;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+
+  @include laptop {
+    justify-content: space-around;
+  }
+
+  @include tablet {
+    justify-content: center;
+  }
+
+  @include phone {
+    justify-content: space-around;
+  }
 
   &__item {
-    float: left;
-    margin-right: (40px/900px)*100%;
+    margin-right: 30px;
+
+    @include laptop {
+      margin: 0;
+    }
 
     @include tablet {
-      float: none;
-      display: inline-block;
+      margin: 0 10px;
     }
 
     @include phone {
-      margin: 0 (15px/900px)*100%;
-
-      &:first-child {
-        margin-left: 0;
-      }
+      margin: 0;
     }
+
 
 
     &:last-child {
       margin-right: 0;
     }
-
 
   }
 }

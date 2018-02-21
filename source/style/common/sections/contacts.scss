@@ -1,34 +1,43 @@
 .contacts {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  max-height: 1112px;
+  min-height: 600px;
+
+  padding-bottom: 185px;
+
+  @include tablet {
+    max-height: 900px;
+    padding-bottom: 265px;
+  }
+
+  @include phone {
+    min-height: 1000px;
+    align-items: flex-start;
+  }
 
   &__info-block {
-    @include center();
-    margin-top: -92.5px;
-
-
-    @include tablet {
-      margin-top: -112px;
-    }
+    z-index: 10;
 
     @include phone {
       margin-top: 0;
       top: 0;
       left: 0;
-      transform: none;
     }
   }
 
   &__map {
     overflow: hidden;
-    height: 100vh;
-    max-height: 1112px;
-    min-height: 600px;
 
-    @include tablet {
-      max-height: 900px;
-    }
-    @include phone {
-      min-height: 1000px;
-    }
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
   }
 }
