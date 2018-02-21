@@ -21,7 +21,6 @@
     .icon {
       transition: fill .5s ease-out;
     }
-
   }
 
   &__name,
@@ -138,6 +137,7 @@
 
   &__button {
     position: absolute;
+    text-align: center;
     bottom: 0;
     width: 50%;
     height: 45px;

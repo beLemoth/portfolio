@@ -9,7 +9,7 @@
     cursor: pointer;
   }
 
-  &:checked ~ .intro__wrapper {
+  &:checked ~ .intro-block {
     .welcome {
       transform: rotateY(-90deg);
       transition-delay: 0s;

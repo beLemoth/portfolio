@@ -10,11 +10,12 @@
 
   display: flex;
 
-  &__wrapper {
+  &-block {
     align-self: center;
     position: relative;
     height: 400px;
     width: 100%;
+    animation: pulldown 1.3s ease-out;
   }
 
   &__footer {

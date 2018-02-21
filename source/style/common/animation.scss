@@ -1,0 +1,12 @@
+@keyframes pulldown {
+  from {
+    transform: rotateX(90deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
