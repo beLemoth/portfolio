@@ -75,6 +75,10 @@
 
   }
 
+  &__pass {
+    margin-bottom: 15px;
+  }
+
 
   &__label {
     color: $white;
@@ -89,7 +93,7 @@
 
   &__checkbox {
     font-size: 0;
-    margin-bottom: 13px;
+    margin-bottom: 8px;
 
     input {
       display: none;
