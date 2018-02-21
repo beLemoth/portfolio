@@ -5,7 +5,8 @@
   position: relative;
   background-color: $blog-bg;
   padding-bottom: 185px;
-  @extend .clearfix;
+
+  display: flex;
 
   @include tablet {
     padding-bottom: 240px;
@@ -17,20 +18,14 @@
 
   &__aside {
     width: 25%;
-    float: left;
     padding: 0 60px 0 15px;
 
     @include desktop {
-      padding-right: 40px;
+      padding-right: 0;
     }
-    @include media(900px) {
-      padding-right: 15px;
-    }
+
+
     @include tablet {
-      float: none;
-      display: none;
-    }
-    @include phone {
       display: block;
       position: fixed;
       right: 100%;
@@ -59,7 +54,6 @@
 
   &__content {
     width: 75%;
-    float: left;
     padding: 0 15px 0 60px;
 
     @include desktop {
