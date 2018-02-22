@@ -56,15 +56,19 @@ if (carousel) (function(){
         return block;
     }
 
+    function carouselBuild(speed) {
+        speed = speed || 1000;
+        blurIn(itemTitle, carouselItems[activeItem].title, speed);
+        blurIn(itemDesc, carouselItems[activeItem].desc, speed);
+        itemLink.href = carouselItems[activeItem].link;
+    }
+
     function carouselInit() {
         preview.appendChild(createImage(activeItem));
         prevButton.appendChild(createImage(item(activeItem-1),'carousel-control'));
         nextButton.appendChild(createImage(item(activeItem+1),'carousel-control'));
 
-        blurIn(itemTitle, carouselItems[activeItem].title);
-        blurIn(itemDesc, carouselItems[activeItem].desc);
-        itemLink.href = carouselItems[activeItem].link;
-
+        carouselBuild();
     }
 
     function carouselChange(speed) {
@@ -79,14 +83,13 @@ if (carousel) (function(){
         fadeOut(previewImage,halfSpeed);
         fadeOut(prevButtonImage,halfSpeed);
         fadeOut(nextButtonImage,halfSpeed);
-        blurIn(itemTitle, carouselItems[activeItem].title, speed);
-        blurIn(itemDesc, carouselItems[activeItem].desc, speed);
+
+        carouselBuild(speed);
 
         setTimeout(function(){
           previewImage.querySelector('img').src = carouselItems[activeItem].image;
             prevButtonImage.querySelector('img').src = carouselItems[item(activeItem-1)].image;
             nextButtonImage.querySelector('img').src = carouselItems[item(activeItem+1)].image;
-            itemLink.href = carouselItems[activeItem].link;
             fadeIn(previewImage,halfSpeed);
             fadeIn(prevButtonImage,halfSpeed);
             fadeIn(nextButtonImage,halfSpeed);
