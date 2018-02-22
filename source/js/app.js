@@ -23,13 +23,16 @@
   // use scroll.js file
 
   var targetToScrollDown = document.querySelector('#scroll-down'),
-      targetToScrollUp = document.querySelector('#scroll-up');
+      targetToScrollUp = document.querySelector('#scroll-up'),
+      header = document.querySelector('.header');
 
   if (targetToScrollDown) {
-      targetToScrollDown.addEventListener('click',function(){scroll(window.innerHeight,false,0,1)});
+      targetToScrollDown.addEventListener('click',function(){
+          scroll(header.offsetHeight,false,20,5);
+      });
   }
   if (targetToScrollUp) {
-      targetToScrollUp.addEventListener('click',function(){scroll(0,true,0,20)});
+      targetToScrollUp.addEventListener('click',function(){scroll(0,true,20,50)});
   }
 
 })();

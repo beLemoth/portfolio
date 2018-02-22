@@ -1,3 +1,9 @@
+.blurIn,
+.blurIn span {
+  animation-name: blurIn;
+  animation-fill-mode: both;
+}
+
 @keyframes pulldown {
   from {
     transform: rotateX(90deg);
@@ -8,5 +14,15 @@
     transform: rotateX(0deg);
     transform-origin: top;
     opacity: 1;
+  }
+}
+
+// blur text animation
+
+@keyframes blurIn {
+  from {
+    transform: scaleX(0.2);
+    filter: blur(20px);
+    opacity: 0;
   }
 }

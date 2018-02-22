@@ -1,8 +1,8 @@
 
 function scroll(target,isUp,baseStep,speed) {
 
-    baseStep = baseStep || 0;                       // default first step
-    speed = speed || 3;                             // default step offset
+    step = baseStep || 300;                       // default first step
+    speed = speed || 10;                             // default step offset
     (function move(step) {
         window.scrollBy(0, step);
 
