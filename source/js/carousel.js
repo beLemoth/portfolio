@@ -43,7 +43,6 @@ if (carousel) (function(){
             (number === length) ? 0 : number;
     }
 
-
     function createImage(item,className) {
         className = className || "carousel-preview";
 

@@ -5,5 +5,6 @@ module.exports = [
     './source/js/animation.js',
     './source/js/scroll.js',
     './source/js/carousel.js',
+    './source/js/skills.js',
     './source/js/app.js'
 ];
