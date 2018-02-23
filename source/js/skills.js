@@ -31,29 +31,31 @@ function skillListBuild (){
 
     for(skills in skillsGroup) {
 
-        var skillGroupListItem = createSkillBlock(skillsBlock, 'skill-group-list__item');
+        var skillGroupListItem = createSkillBlock(skillsBlock, 'skill-group-list__item'),
+            skillGroupListTitle = createSkillBlock(skillGroupListItem, 'skill-group-list__title'),
+            skillsList = createSkillBlock(skillGroupListItem, 'skills-list', 'ul');
 
-        var skillGroupListTitle = createSkillBlock(skillGroupListItem, 'skill-group-list__title');
         skillGroupListTitle.textContent = skills;
 
-        var skillsList = createSkillBlock(skillGroupListItem, 'skills-list', 'ul');
+        for(skillItem in skillsGroup[skills]) {
 
-        for(skill in skillsGroup[skills]) {
-
-            var skillsListItem = createSkillBlock(skillsList, 'skills-list__item', 'li');
-
-            var value = skillsGroup[skills][skill],
+            var value = skillsGroup[skills][skillItem],
                 array = 3.14*value,
                 offset = 314-array;
 
+            var skillsListItem = createSkillBlock(skillsList, 'skills-list__item', 'li'),
+                skill = createSkillBlock(skillsListItem, 'skill');
+
             var skillCircle = '<svg class="skill__circle" viewbox="0 0 120 120" preserveAspectRatio="none">';
             skillCircle += '<circle class="skill__bg skill__bg_grey" cx="60" cy="60" r="60"></circle>';
-            skillCircle += '<circle class="skill__indicator skill__indicator_green" cx="60" cy="60" r="50" fill="none" stroke-dasharray="'+array+' '+offset+'" stroke-width="20" stroke-opacity="'+value/100+'"></circle>';
+            skillCircle += '<circle class="skill__indicator skill__indicator_green" cx="60" cy="60" r="50" fill="none" stroke-dasharray="0 0" stroke-width="20" stroke-opacity="0" data-value="'+value+'"></circle>';
+            //skillCircle += '<circle class="skill__indicator skill__indicator_green" cx="60" cy="60" r="50" fill="none" stroke-dasharray="'+array+' '+offset+'" stroke-width="20" stroke-opacity="'+value/100+'"></circle>';
             skillCircle += '<circle class="skill_front skill__front_white" cx="60" cy="60" r="40"></circle></svg>';
 
-            skillsListItem.innerHTML = skillCircle;
+            skill.innerHTML = skillCircle;
 
-            createSkillBlock(skillsListItem,'skill__name');
+            var skillName = createSkillBlock(skill,'skill__name');
+            skillName.innerText = skillItem;
         }
     }
 }
