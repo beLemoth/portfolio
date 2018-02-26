@@ -48,8 +48,8 @@ function skillListBuild (){
 
             var skillCircle = '<svg class="skill__circle" viewbox="0 0 120 120" preserveAspectRatio="none">';
             skillCircle += '<circle class="skill__bg skill__bg_grey" cx="60" cy="60" r="60"></circle>';
-            skillCircle += '<circle class="skill__indicator skill__indicator_green" cx="60" cy="60" r="50" fill="none" stroke-dasharray="0 0" stroke-width="20" stroke-opacity="0" data-value="'+value+'"></circle>';
-            //skillCircle += '<circle class="skill__indicator skill__indicator_green" cx="60" cy="60" r="50" fill="none" stroke-dasharray="'+array+' '+offset+'" stroke-width="20" stroke-opacity="'+value/100+'"></circle>';
+            //skillCircle += '<circle class="skill__indicator skill__indicator_green" cx="60" cy="60" r="50" fill="none" stroke-dasharray="0 0" stroke-width="20" stroke-opacity="0" data-value="'+value+'"></circle>';
+            skillCircle += '<circle class="skill__indicator skill__indicator_green" cx="60" cy="60" r="50" fill="none" stroke-dasharray="'+array+' '+offset+'" stroke-width="20" stroke-opacity="'+value/100+'"></circle>';
             skillCircle += '<circle class="skill_front skill__front_white" cx="60" cy="60" r="40"></circle></svg>';
 
             skill.innerHTML = skillCircle;

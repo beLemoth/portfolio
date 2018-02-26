@@ -1,23 +1,9 @@
 .contacts {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 100vh;
-  max-height: 1112px;
-  min-height: 600px;
-
   padding-bottom: 185px;
 
   @include tablet {
-    max-height: 900px;
     padding-bottom: 265px;
-  }
-
-  @include phone {
-    min-height: 1000px;
-    align-items: flex-start;
   }
 
   &__info-block {
@@ -30,6 +16,21 @@
     }
   }
 
+  &-map-wrapper {
+    position: relative;
+
+    height: 100vh;
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include phone {
+      align-items: flex-start;
+    }
+  }
+
   &__map {
     overflow: hidden;
 
@@ -38,6 +39,5 @@
     bottom: 0;
     right: 0;
     left: 0;
-
   }
 }

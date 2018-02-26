@@ -1,10 +1,10 @@
 // CONTACTS section
 section.contacts
-
     .contacts__map#map
-    .contacts-info.contacts__info-block
-        .contacts-info__title.subtitle контакты
-        ul.contacts-info__list
-            each value, item in contacts
-                li(class="contacts-info__item contacts-info__item_"+item)= value
-                    +icon(item,'green')
+    .contacts-map-wrapper
+        .contacts-info.contacts__info-block
+            .contacts-info__title.subtitle контакты
+            ul.contacts-info__list
+                each value, item in contacts
+                    li(class="contacts-info__item contacts-info__item_"+item)= value
+                        +icon(item,'green')
