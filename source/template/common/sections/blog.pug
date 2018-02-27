@@ -4,19 +4,19 @@ section.blog
     aside.blog__aside
         .blog-titles
             ul.blog-titles__list
-                li.blog-titles__item.active
+                li.blog-titles__item.active#221120161
                     .blog-titles__text Самое важное в SASS
-                li.blog-titles__item
+                li.blog-titles__item#131120161
                     .blog-titles__text Приёмы в вёрстке, без которых не обходится ни один сайт
-                li.blog-titles__item
+                li.blog-titles__item#101120162
                     .blog-titles__text Самый необходимый набор Gulp плагинов
-                li.blog-titles__item
+                li.blog-titles__item#101120161
                     .blog-titles__text Почему я выбрал Pug
         .blog__aside-label
 
     .blog__content
 
-        article.blog-article
+        article.blog-article('data-number=221120161')
             h3.blog-article__title Самое важное в SASS
             .blog-article__date 22 ноября 2016
             .blog-article__text
@@ -37,7 +37,7 @@ section.blog
                 .blog-article__inner
                     img(src='./assets/img/blog-article-1-img.jpg' alt='article')
 
-        article.blog-article
+        article.blog-article('data-number=131120161')
             h3.blog-article__title Приёмы в вёрстке, без которых не обходится ни один сайт
             .blog-article__date 13 ноября 2016
             .blog-article__text
@@ -56,9 +56,9 @@ section.blog
                      реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой
                      процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
 
-        article.blog-article
+        article.blog-article('data-number=101120162')
             h3.blog-article__title Самый необходимый набор Gulp плагинов
-            .blog-article__date 13 ноября 2016
+            .blog-article__date 10 ноября 2016
             .blog-article__text
                 p.
                     Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные
@@ -75,7 +75,7 @@ section.blog
                      реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой
                      процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
 
-        article.blog-article
+        article.blog-article('data-number=101120161')
             h3.blog-article__title Почему я выбрал Pug
             .blog-article__date 13 ноября 2016
             .blog-article__text
