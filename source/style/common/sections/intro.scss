@@ -7,11 +7,15 @@
   min-height: 600px;
   width: 100%;
   position: relative;
-  @extend .clearfix;
 
-  &__wrapper {
-    @include center('y');
+  display: flex;
+
+  &-block {
+    align-self: center;
+    position: relative;
+    height: 400px;
     width: 100%;
+    animation: pulldown 1.3s ease-out;
   }
 
   &__footer {

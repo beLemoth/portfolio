@@ -1,20 +1,19 @@
 
-function scroll(target,isUp,baseStep,speed) {
+function scroll(target) {
 
-    baseStep = baseStep || 0;                       // default first step
-    speed = speed || 3;                             // default step offset
+    var baseStep = (target - window.pageYOffset)/80;
+
     (function move(step) {
         window.scrollBy(0, step);
 
-        step += (isUp) ? -speed : speed;            // negative step to scrollUp, other to scrollDown
+        step += baseStep;
         var pageOffset = window.pageYOffset;
 
-        if (((pageOffset > target) && isUp) || ((pageOffset < target) && !(isUp))) {
-            if ((((step+pageOffset)>target) && isUp) || (((step+pageOffset)<target) && !(isUp))) {requestAnimationFrame(function(){
-                move(step);
-            })} else {
-                scrollTo(0,target);
-            }
+        if ((baseStep > 0 && pageOffset < target) || (baseStep < 0 && pageOffset > target)) {
+            requestAnimationFrame(function() {
+                if((baseStep > 0 && (step+pageOffset)<target) || (baseStep < 0 && (step+pageOffset)>target)) move(step);
+                else scrollTo(0,target);
+            })
         }
     })(baseStep);
 }

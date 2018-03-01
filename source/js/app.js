@@ -5,11 +5,16 @@
   var intro = document.querySelector('section.intro');
   if(intro){
       var checkbox = intro.querySelector('input.flip'),
-          wrapper = document.querySelector('.intro__wrapper');
+          block = document.querySelector('.intro-block'),
+          login = document.querySelector('.login');
 
-      intro.addEventListener('click',function () {
-          if(event.target === intro || event.target === wrapper ) {
-              console.log(checkbox);
+      checkbox.checked = false;
+
+      intro.addEventListener('click',function (event) {
+
+          login.style.display = 'block';
+
+          if(event.target === intro || event.target === block ) {
               checkbox.checked = false;
           }
       });
@@ -18,13 +23,16 @@
   // use scroll.js file
 
   var targetToScrollDown = document.querySelector('#scroll-down'),
-      targetToScrollUp = document.querySelector('#scroll-up');
+      targetToScrollUp = document.querySelector('#scroll-up'),
+      header = document.querySelector('.header');
 
   if (targetToScrollDown) {
-      targetToScrollDown.addEventListener('click',function(){scroll(window.innerHeight,false,0,1)});
+      targetToScrollDown.addEventListener('click',function(){
+          scroll(header.offsetHeight,false,20,5);
+      });
   }
   if (targetToScrollUp) {
-      targetToScrollUp.addEventListener('click',function(){scroll(0,true,0,20)});
+      targetToScrollUp.addEventListener('click',function(){scroll(0,true,20,50)});
   }
 
 })();

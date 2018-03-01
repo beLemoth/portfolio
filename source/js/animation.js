@@ -31,68 +31,20 @@ function fadeIn(element,speed,delay,easing) {
     );
 }
 
-function moveTop(element,speed,delay,easing) {
-    speed = (speed > 0) ? speed : 1000 || 1000;
-    delay = delay || 0;
-    easing = easing || 'ease-out';
-    element.animate(
-        [
-            {bottom: 0+'%'},
-            {bottom: 100+'%'}
-        ],
-        {
-            delay: delay,
-            duration: speed
-        }
-    );
-}
-
-function moveDown(element,speed,delay,easing) {
-    speed = (speed > 0) ? speed : 1000 || 1000;
-    delay = delay || 0;
-    easing = easing || 'ease-out';
-    element.animate(
-        [
-            {top: 0+'%'},
-            {top: 100+'%'}
-        ],
-        {
-            delay: delay,
-            duration: speed
-        }
-    );
-}
-
-function pushTop(element,speed,delay,easing) {
-    console.log(element, element.style.top);
-    speed = (speed > 0) ? speed : 1000 || 1000;
-    delay = delay || 0;
-    easing = easing || 'ease-out';
-    element.animate(
-        [
-            {bottom: 100+'%'},
-            {bottom: 0+'%'}
-        ],
-        {
-            delay: delay,
-            duration: speed
-        }
-    );
-}
-
-
-function pushDown(element,speed,delay,easing) {
-    speed = (speed > 0) ? speed : 1000 || 1000;
-    delay = delay || 0;
-    easing = easing || 'ease-out';
-    element.animate(
-        [
-            {top: 100 + '%'},
-            {top: 0 + '%'}
-        ],
-        {
-            delay: delay,
-            duration: speed
-        }
-    )
+function blurIn(element,text,speed) {
+    speed = speed || 1000;
+    var letter = text;
+    var duration = speed/3;
+    var str = '';
+    var delay = 0;
+    for (l = 0; l < letter.length; l++) {
+        if (letter[l] != ' ') {
+            str += '<span style="animation-delay:'+delay+'ms; -moz-animation-delay:'+delay+'ms; -webkit-animation-delay:'+delay+'ms;';
+            str += 'animation-duration:'+duration+'ms; -moz-animation-duration:'+duration+'ms; -webkit-animation-duration:'+duration+'ms; ">';
+            str += letter[l]+'</span>';
+            delay += speed/letter.length;
+        } else
+            str += letter[l];
+    }
+    element.innerHTML = str;
 }
