@@ -28,11 +28,11 @@
 
   if (targetToScrollDown) {
       targetToScrollDown.addEventListener('click',function(){
-          scroll(header.offsetHeight,false,20,5);
+          scroll(header.offsetHeight);
       });
   }
   if (targetToScrollUp) {
-      targetToScrollUp.addEventListener('click',function(){scroll(0,true,20,50)});
+      targetToScrollUp.addEventListener('click',function(){scroll(0)});
   }
 
 })();

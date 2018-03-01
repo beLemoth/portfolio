@@ -24,8 +24,6 @@ document.addEventListener('DOMContentLoaded',function () {
 
         object.addEventListener('load',function(){
 
-            console.log(this);
-
             loadedProgress = Math.round(++loadedItems/images.length*100);
             text.innerText = loadedProgress+'%';
 

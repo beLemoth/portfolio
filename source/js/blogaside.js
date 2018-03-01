@@ -1,6 +1,6 @@
 var blogAsideLabel = document.querySelector('.blog__aside-label');
 
-if(blogAsideLabel.style.display !== 'none') {
+if(blogAsideLabel && blogAsideLabel.style.display !== 'none') {
 
     var blogAside = blogAsideLabel.parentElement;
 
