@@ -7,5 +7,6 @@ module.exports = [
     './source/js/carousel.js',
     './source/js/skills.js',
     './source/js/scrollspy.js',
+    './source/js/blogaside.js',
     './source/js/app.js'
 ];

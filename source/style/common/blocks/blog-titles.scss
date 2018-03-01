@@ -10,8 +10,19 @@
     right: 75%;
     margin-right: 60px;
 
-    @include phone {
+    @include laptop {
       margin-right: 0;
+    }
+  }
+
+  @include tablet {
+    height: 100%;
+    background-color: $light-green;
+  }
+
+  &__list {
+    @include phone {
+      margin-right: 10px;
     }
   }
 
@@ -24,6 +35,10 @@
     position: relative;
     cursor: pointer;
 
+    @include tablet {
+      color: $white;
+    }
+
     @include phone {
       color: rgba($white,.7);
       padding-right: 0;
@@ -33,7 +48,7 @@
       color: $green;
       font-family: $bold-text;
 
-      @include phone {
+      @include tablet {
         color: $white;
       }
 
@@ -45,7 +60,7 @@
         @include center('y');
         right: 0;
 
-        @include phone {
+        @include tablet {
           display: none;
         }
 
