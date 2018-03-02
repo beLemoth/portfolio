@@ -6,7 +6,7 @@
   left: 0;
   right: 0;
   min-height: 185px;
-
+  z-index: 10;
 
   &__block-wrapper {
     background-color: rgba($grey, .85);
