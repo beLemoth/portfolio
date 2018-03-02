@@ -2,6 +2,7 @@
 
 module.exports = [
     './source/js/preloader.js',
+    './source/js/intro.js',
     './source/js/map.js',
     './source/js/animation.js',
     './source/js/scroll.js',

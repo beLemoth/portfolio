@@ -15,7 +15,12 @@
     position: relative;
     height: 400px;
     width: 100%;
-    animation: pulldown 1.3s ease-out;
+    opacity: 0;
+
+    &.active {
+      animation: pulldown 1.5s ease-out;
+      opacity: 1;
+    }
   }
 
   &__footer {

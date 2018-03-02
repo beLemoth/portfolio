@@ -5,20 +5,28 @@ function fadeOut(element,speed,delay,easing) {
     easing = easing || 'ease-out';
     element.animate(
         [
-            {opacity:1, display: ''},
-            {opacity:0, display: 'none'}
+            {opacity:1},
+            {opacity:0}
         ],
         {
             delay: delay,
             duration: speed
         }
+
     );
+    setTimeout(function(){
+        element.style.display = 'none';
+    }, speed);
+
 }
 
 function fadeIn(element,speed,delay,easing) {
     speed = (speed > 0) ? speed : 1000 || 1000;
     delay = delay || 0;
     easing = easing || 'ease-out';
+
+    element.style.display = '';
+
     element.animate(
         [
             {opacity:0},

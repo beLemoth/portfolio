@@ -1,38 +1,71 @@
+'use strict';
 
-(function() {
-  'use strict';
+var promise = new Promise(function(resolve, reject) {
+    document.addEventListener('DOMContentLoaded', function () {
 
-  var intro = document.querySelector('section.intro');
-  if(intro){
-      var checkbox = intro.querySelector('input.flip'),
-          block = document.querySelector('.intro-block'),
-          login = document.querySelector('.login');
+        var elements = document.getElementsByTagName('*'),
+            text = document.querySelector('.preload__text'),
+            images = [],
+            loadedItems = 0,
+            loadedProgress = 0;
 
-      checkbox.checked = false;
+        [].forEach.call(elements, function (value, item, array) {
 
-      intro.addEventListener('click',function (event) {
+            var computedStyle = getComputedStyle(value);
 
-          login.style.display = 'block';
+            if (value.tagName === 'IMG' && value.src) images.push(value.src);
+            if (computedStyle.backgroundImage && computedStyle.backgroundImage !== 'none') {
 
-          if(event.target === intro || event.target === block ) {
-              checkbox.checked = false;
-          }
-      });
-  }
+                var tpl = computedStyle.backgroundImage.replace('url("', '');
+                tpl = tpl.replace('")', '');
+                images.push(tpl);
+            }
+        });
 
-  // use scroll.js file
+        images.forEach(function (value) {
 
-  var targetToScrollDown = document.querySelector('#scroll-down'),
-      targetToScrollUp = document.querySelector('#scroll-up'),
-      header = document.querySelector('.header');
+            var object = document.createElement('img');
+            object.src = value;
 
-  if (targetToScrollDown) {
-      targetToScrollDown.addEventListener('click',function(){
-          scroll(header.offsetHeight);
-      });
-  }
-  if (targetToScrollUp) {
-      targetToScrollUp.addEventListener('click',function(){scroll(0)});
-  }
+            object.addEventListener('load', function () {
 
-})();
+                loadedProgress = Math.round(++loadedItems / images.length * 100);
+                text.innerText = loadedProgress + '%';
+
+                if (loadedProgress >= 100) {
+
+                    var element = document.querySelector('.preload');
+
+                    fadeOut(element, 1000);
+                    resolve();
+                }
+            });
+        });
+    });
+});
+
+promise.then(function() {
+
+    var introSection = document.querySelector('section.intro');
+
+    if(introSection) {
+        var intro = new Intro();
+        intro.init();
+    }
+
+    // use scroll.js file
+
+    var targetToScrollDown = document.querySelector('#scroll-down'),
+        targetToScrollUp = document.querySelector('#scroll-up'),
+        header = document.querySelector('.header');
+
+    if (targetToScrollDown) {
+        targetToScrollDown.addEventListener('click',function(){
+            scroll(header.offsetHeight);
+        });
+    }
+    if (targetToScrollUp) {
+        targetToScrollUp.addEventListener('click',function(){scroll(0)});
+    }
+
+});
